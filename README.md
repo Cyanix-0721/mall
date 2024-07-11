@@ -41,3 +41,12 @@ This repository is a secondary archive and is not intended for active developmen
 ## License
 
 This project is licensed under the Apache License 2.0.
+
+## Acknowledgements
+
+This project has been inspired by and built upon the principles and technologies found in the following projects:
+
+- [Vue Pure Admin](https://github.com/pure-admin/vue-pure-admin) - A beautiful and comprehensive Vue admin template that has influenced our front-end development.
+- [Mall](https://github.com/macrozheng/mall) - An excellent e-commerce microservices architecture project that has provided valuable insights and code examples for our backend services.
+
+We are grateful for the hard work and dedication of the contributors to these projects.
