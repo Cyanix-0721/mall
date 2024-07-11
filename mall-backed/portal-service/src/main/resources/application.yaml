@@ -1,0 +1,40 @@
+my:
+  db: localhost
+
+server:
+  port: 8011
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${my.db}:3306/mall11?useSSL=false&characterEncoding=utf8&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+  application:
+    name: portal-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  redis:
+    host: localhost
+    port: 6379
+    password: 114514
+
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: g_status
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+management:
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'

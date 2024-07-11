@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8">
+	<meta charset="UTF-8">
+	<!--edge浏览器H5兼容设置-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!--360浏览器H5兼容设置-->
+	<meta name="renderer" content="webkit" />
+	<title>电脑商城</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--导入核心文件-->
+	<script src="../bootstrap3/js/holder.js"></script>
+	<link href="../bootstrap3/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<script src="../bootstrap3/jquery-1.8.3.min.js"></script>
+	<script src="../bootstrap3/js/bootstrap.js"></script>
+	<!-- 字体图标 -->
+	<link rel="stylesheet" href="../bootstrap3/font-awesome-4.7.0/css/font-awesome.css" />
+	<link rel="stylesheet" type="text/css" href="../css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../css/top.css" />
+	<link rel="stylesheet" type="text/css" href="../css/footer.css" />
+	<link rel="stylesheet" type="text/css" href="../css/favorites.css" />
+	<link rel="stylesheet" type="text/css" href="../css/imgmove.css" />
+	<link rel="stylesheet" type="text/css" href="../css/coupon.css"/>
+	<script src="../js/favorites.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/imgmove.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/coupon.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<!--头部-->
+<header class="header">
+	<!--电脑商城logo-->
+	<div class="row">
+		<div class="col-md-3">
+			<a href="index.html">
+				<img src="../images/index/1.png" width="250px"/>
+			</a>
+		</div>
+		<!--快捷选项-->
+		<div class="col-md-9 top-item">
+			<ul class="list-inline pull-right">
+				<li><a href="favorites.html"><span class="fa fa-heart"></span>&nbsp;收藏</a></li>
+				<li class="li-split">|</li>
+				<li><a href="orders.html"><span class="fa fa-file-text"></span>&nbsp;订单</a></li>
+				<li class="li-split">|</li>
+				<li><a href="cart.html"><span class="fa fa-cart-plus"></span>&nbsp;购物车</a></li>
+				<li class="li-split">|</li>
+				<li>
+					<!--下列列表按钮 ：管理-->
+					<div class="btn-group">
+						<button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+							<span id="top-dropdown-btn"><span class="fa fa-gears"></span>&nbsp;管理 <span class="caret"></span></span>
+						</button>
+						<ul class="dropdown-menu top-dropdown-ul" role="menu">
+							<li><a href="password.html">修改密码</a></li>
+							<li><a href="userdata.html">个人资料</a></li>
+							<li><a href="upload.html">上传头像</a></li>
+							<li><a href="address.html">收货管理	</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="li-split">|</li>
+				<li><a href="login.html"><span class="fa fa-user"></span>&nbsp;登录</a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<!--导航 -->
+<!--分割导航和顶部-->
+<div class="row top-nav">
+	<div class="col-md-6">
+		<ul class="nav nav-pills">
+			<li>
+				<a href="#"></a>
+			</li>
+			<li class="active"><a href="index.html"><span class="fa fa-home"></span></a></li>
+			<li><a href="FlashPromotionSession.html">秒杀</a></li>
+			<li><a href="coupon.html">优惠券</a></li>
+		</ul>
+	</div>
+	<div class="col-md-6">
+		<form action="search.html" class="form-inline pull-right" role="form">
+			<div class="form-group">
+				<input type="text" class="form-control" id="search" name="search" placeholder="请输入商品名称进行搜索">
+			</div>
+			<button type="submit" class="btn btn-default btn-sm"><span class="fa fa-search"></span></button>
+		</form>
+	</div>
+</div>
+<!--头部结束-->
+<!--导航结束-->
+<!-- 第一个优惠券 -->
+<div class="coupon coupon-wave-left coupon-yellow" id="coupon1">
+	<div class="coupon-info coupon-hole coupon-info-right-dashed">
+		<div class="coupon-price">10.00</div>
+		<div class="coupon-desc">10元优惠券满50.00元使用</div>
+		<div class="coupon-expiry-date">有效期：2023.10.01-2024.10.30</div>
+	</div>
+	<div class="coupon-get coupon-get-already coupon-get-button" data-popup-id="popupModal1"><button style="color: red;">立即领取</button></div>
+</div>
+<!-- 弹窗提示 -->
+<div id="popupModal1" class="modal">
+	<div class="modal-content">
+		<p>领取成功！</p>
+		<button class="closePopup btn btn-secondary">确定</button>
+	</div>
+</div>
+
+<!-- 第二个优惠券 -->
+<div class="coupon coupon-wave-left coupon-yellow" id="coupon2">
+	<div class="coupon-info coupon-hole coupon-info-right-dashed">
+		<div class="coupon-price">5.00</div>
+		<div class="coupon-desc">5元优惠券满50.00元使用</div>
+		<div class="coupon-expiry-date">有效期：2023.10.11-2024.09.30</div>
+	</div>
+	<div class="coupon-get coupon-get-already coupon-get-button" data-popup-id="popupModal2"><button style="color: red;">立即领取</button></div>
+</div>
+<!-- 弹窗提示 -->
+<div id="popupModal2" class="modal">
+	<div class="modal-content">
+		<p>领取成功！</p>
+		<button class="closePopup btn btn-secondary">确定</button>
+	</div>
+</div>
+
+
+<div class="coupon coupon-wave-left coupon-yellow" id="coupon3">
+	<div class="coupon-info coupon-hole coupon-info-right-dashed">
+		<div class="coupon-price">¥50.00</div>
+		<div class="coupon-desc">50元优惠券满500.00元使用</div>
+		<div class="coupon-expiry-date">有效期：2024.05.01-2024.07.30</div>
+	</div>
+	<div class="coupon-get coupon-get-already coupon-get-button" data-popup-id="popupModal3"><button style="color: red;">立即领取</button></div>
+</div>
+<!-- 弹窗提示 -->
+<div id="popupModal3" class="modal">
+	<div class="modal-content">
+		<p>领取成功！</p>
+		<button class="closePopup btn btn-secondary">确定</button>
+	</div>
+</div>
+
+
+<div class="coupon coupon-wave-left coupon-yellow" id="coupon4">
+	<div class="coupon-info coupon-hole coupon-info-right-dashed">
+		<div class="coupon-price">¥5.00</div>
+		<div class="coupon-desc">5元优惠券满50.00元使用</div>
+		<div class="coupon-expiry-date">有效期：2024.03.01-2024.06.30</div>
+	</div>
+	<div class="coupon-get coupon-get-already coupon-get-button" data-popup-id="popupModal4"><button style="color: red;">立即领取</button></div>
+</div>
+<!-- 弹窗提示 -->
+<div id="popupModal4" class="modal">
+	<div class="modal-content">
+		<p>领取成功！</p>
+		<button class="closePopup btn btn-secondary">确定</button>
+	</div>
+</div>
+
+
+<div class="coupon coupon-wave-left coupon-yellow" id="coupon5">
+	<div class="coupon-info coupon-hole coupon-info-right-dashed">
+		<div class="coupon-price">¥10.00</div>
+		<div class="coupon-desc">10元优惠券满100.00元使用</div>
+		<div class="coupon-expiry-date">有效期：2023.11.01-2024.10.30</div>
+	</div>
+	<div class="coupon-get coupon-get-already coupon-get-button" data-popup-id="popupModal5"><button style="color: red;">立即领取</button></div>
+</div>
+<!-- 弹窗提示 -->
+<div id="popupModal5" class="modal">
+	<div class="modal-content">
+		<p>领取成功！</p>
+		<button class="closePopup btn btn-secondary">确定</button>
+	</div>
+</div>
+
+
+<div class="coupon coupon-wave-left coupon-yellow" id="coupon6">
+	<div class="coupon-info coupon-hole coupon-info-right-dashed">
+		<div class="coupon-price">¥100.00</div>
+		<div class="coupon-desc">100元优惠券满500.00元使用</div>
+		<div class="coupon-expiry-date">有效期：2024.01.01-2025.10.30</div>
+	</div>
+	<div class="coupon-get coupon-get-already coupon-get-button" data-popup-id="popupModal6"><button style="color: red;">立即领取</button></div>
+</div>
+<!-- 弹窗提示 -->
+<div id="popupModal6" class="modal">
+	<div class="modal-content">
+		<p>领取成功！</p>
+		<button class="closePopup btn btn-secondary coupon-get-button" data-popup-id="popupModal6">确定</button>
+	</div>
+</div>
+<div class="coupon coupon-wave-left coupon-yellow" id="coupon7">
+	<div class="coupon-info coupon-hole coupon-info-right-dashed">
+		<div class="coupon-price">¥50.00</div>
+		<div class="coupon-desc">50元优惠券满200.00元使用</div>
+		<div class="coupon-expiry-date">有效期：2024.02.01-2024.10.30</div>
+	</div>
+	<div class="coupon-get coupon-get-already coupon-get-button" data-popup-id="popupModal7"><button style="color: red;">立即领取</button></div>
+</div>
+<!-- 弹窗提示 -->
+<div id="popupModal7" class="modal">
+	<div class="modal-content">
+		<p>领取成功！</p>
+		<button class="closePopup btn btn-secondary coupon-get-button" data-popup-id="popupModal7">确定</button>
+	</div>
+</div>
+<div class="coupon coupon-wave-left coupon-yellow" id="coupon8">
+	<div class="coupon-info coupon-hole coupon-info-right-dashed">
+		<div class="coupon-price">¥5.00</div>
+		<div class="coupon-desc">5元优惠券满50.00元使用</div>
+		<div class="coupon-expiry-date">有效期：2019.10.01-2019.10.30</div>
+	</div>
+	<div class="coupon-get coupon-get-already coupon-get-button" data-popup-id="popupModal8"><button style="color: red;">立即领取</button></div>
+</div>
+<!-- 弹窗提示 -->
+<div id="popupModal8" class="modal">
+	<div class="modal-content">
+		<p>领取成功！</p>
+		<button class="closePopup btn btn-secondary coupon-get-button" data-popup-id="popupModal8">确定</button>
+	</div>
+</div>
+<!--页脚开始-->
+<div class="clearfix"></div>
+<footer class="footer">
+	<!-- 品质保障，私人定制等-->
+	<div class="text-center rights container">
+		<div class="col-md-offset-2 col-md-2">
+			<span class="fa fa-thumbs-o-up"></span>
+			<p>品质保障</p>
+		</div>
+		<div class="col-md-2">
+			<span class="fa fa-address-card-o"></span>
+
+			<p>私人订制</p>
+		</div>
+		<div class="col-md-2">
+			<span class="fa fa-graduation-cap"></span>
+			<p>学生特供</p>
+		</div>
+		<div class="col-md-2">
+			<span class="fa fa-bitcoin"></span>
+
+			<p>专属特权</p>
+		</div>
+	</div>
+	<!--联系我们、下载客户端等-->
+	<div class="container beforeBottom">
+		<div class="col-md-offset-1 col-md-3">
+			<div><img src="../images/index/1.png" alt="" class="footLogo"  width="150px"/></div>
+			<div><img src="../images/index/footerFont.png" alt="" /></div>
+		</div>
+		<div class="col-md-4 callus text-center">
+			<div class="col-md-4">
+				<ul>
+					<li>
+						<a href="#">
+							<p>买家帮助</p>
+						</a>
+					</li>
+					<li><a href="#">新手指南</a></li>
+					<li><a href="#">服务保障</a></li>
+					<li><a href="#">常见问题</a></li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<ul>
+					<li>
+						<a href="#">
+							<p>商家帮助</p>
+						</a>
+					</li>
+					<li><a href="#">商家入驻</a></li>
+					<li><a href="#">商家后台</a></li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<ul>
+					<li>
+						<a href="#">
+							<p>关于我们</p>
+						</a>
+					</li>
+					<li><a href="#">关于圆心</a></li>
+					<li><a href="#">联系我们</a></li>
+					<li>
+						<span class="fa fa-wechat"></span>
+						<span class="fa fa-weibo"></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="col-md-5">
+				<p>电脑商城客户端</p>
+				<img src="../images/index/ios.png" class="lf">
+				<img src="../images/index/android.png" alt="" class="lf" />
+			</div>
+			<div class="col-md-6">
+				<img src="../images/index/1.png" width="200px">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

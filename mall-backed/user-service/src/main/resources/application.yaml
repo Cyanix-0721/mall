@@ -1,0 +1,67 @@
+my: # 自定义配置
+  db: localhost # 数据库地址
+
+server: # 服务器配置
+  port: 8020 # 服务器端口
+
+spring: # Spring配置
+  application:
+    name: user-service # 应用名称
+  datasource: # 数据源配置
+    driver-class-name: com.mysql.cj.jdbc.Driver # 数据库驱动类名
+    url: jdbc:mysql://${my.db}:3306/mall?useSSL=false&characterEncoding=utf8&allowPublicKeyRetrieval=true # 数据库连接URL
+    username: root # 数据库用户名
+    password: 114514 # 数据库密码
+  redis:
+    host: localhost
+    port: 6379
+    password: 114514
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848 # Nacos服务器地址
+  rabbitmq:
+    host: localhost # 你的虚拟机IP
+    port: 5672 # 端口
+    virtual-host: /mall # 虚拟主机
+    username: mall # 用户名
+    password: mall # 密码
+    connection-timeout: 1s # 设置MQ的连接超时时间
+    template:
+      retry:
+        enabled: true # 开启超时重试机制
+        initial-interval: 1000ms # 失败后的初始等待时间
+        multiplier: 1 # 失败后下次的等待时长倍数，下次等待时长 = initial-interval * multiplier
+        max-attempts: 3 # 最大重试次数
+      # publisher-confirm-type: correlated # 开启消息确认机制
+      # publisher-returns: true # 开启消息返回机制
+
+  mvc: # Spring MVC配置
+    hiddenmethod:
+      filter:
+        enabled: true # 启用隐藏方法过滤器，支持PUT、DELETE请求
+    pathmatch:
+      matching-strategy: ant_path_matcher # 路径匹配策略
+
+mybatis-plus: # MyBatis Plus配置
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 日志实现
+    map-underscore-to-camel-case: true # 下划线到驼峰的映射
+  global-config:
+    db-config:
+      logic-delete-field: status # 逻辑删除字段
+      logic-delete-value: 0 # 逻辑删除值
+      logic-not-delete-value: 1 # 逻辑未删除值
+
+management: # 管理端配置
+  endpoint:
+    health:
+      show-details: always # 健康检查显示详情
+    httptrace:
+      enabled: true # 启用HTTP跟踪
+    shutdown:
+      enabled: true # 启用关闭端点
+  endpoints:
+    web:
+      exposure:
+        include: '*' # 暴露所有端点

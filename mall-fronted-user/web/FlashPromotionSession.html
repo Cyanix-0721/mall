@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8">
+    <meta charset="UTF-8">
+    <!--edge浏览器H5兼容设置-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--360浏览器H5兼容设置-->
+    <meta name="renderer" content="webkit" />
+    <title>电脑商城</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--导入核心文件-->
+    <script src="../bootstrap3/js/holder.js"></script>
+    <link href="../bootstrap3/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="../bootstrap3/jquery-1.8.3.min.js"></script>
+    <script src="../bootstrap3/js/bootstrap.js"></script>
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="../bootstrap3/font-awesome-4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../css/top.css" />
+    <link rel="stylesheet" type="text/css" href="../css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="../css/favorites.css" />
+    <link rel="stylesheet" type="text/css" href="../css/imgmove.css" />
+
+    <script src="../js/favorites.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/imgmove.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+    <!--头部-->
+    <header class="header">
+        <!--电脑商城logo-->
+        <div class="row">
+            <div class="col-md-3">
+                <a href="index.html">
+                    <img src="../images/index/1.png" width="250px" />
+                </a>
+            </div>
+            <!--快捷选项-->
+            <div class="col-md-9 top-item">
+                <ul class="list-inline pull-right">
+                    <li><a href="favorites.html"><span class="fa fa-heart"></span>&nbsp;收藏</a></li>
+                    <li class="li-split">|</li>
+                    <li><a href="orders.html"><span class="fa fa-file-text"></span>&nbsp;订单</a></li>
+                    <li class="li-split">|</li>
+                    <li><a href="cart.html"><span class="fa fa-cart-plus"></span>&nbsp;购物车</a></li>
+                    <li class="li-split">|</li>
+                    <li>
+                        <!--下列列表按钮 ：管理-->
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                                <span id="top-dropdown-btn"><span class="fa fa-gears"></span>&nbsp;管理 <span
+                                        class="caret"></span></span>
+                            </button>
+                            <ul class="dropdown-menu top-dropdown-ul" role="menu">
+                                <li><a href="password.html">修改密码</a></li>
+                                <li><a href="userdata.html">个人资料</a></li>
+                                <li><a href="upload.html">上传头像</a></li>
+                                <li><a href="address.html">收货管理 </a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="li-split">|</li>
+                    <li><a href="login.html"><span class="fa fa-user"></span>&nbsp;登录</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!--导航 -->
+    <!--分割导航和顶部-->
+    <div class="row top-nav">
+        <div class="col-md-6">
+            <ul class="nav nav-pills">
+                <li>
+                    <a href="#"></a>
+                </li>
+                <li class="active"><a href="index.html"><span class="fa fa-home"></span></a></li>
+                <li><a href="FlashPromotionSession.html">秒杀</a></li>
+                <li><a href="coupon.html">优惠券</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .big {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        #banner,
+        #banner2,
+        #banner3 {
+            margin: 0 auto;
+            background-image: url("../images/index/1.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #day,
+        #hour,
+        #minute,
+        #second,
+        #2day,
+        #2hour,
+        #2minute,
+        #2second,
+        #3day,
+        #3hour,
+        #3minute,
+        #3second {
+            height: 60px;
+            width: 60px;
+            background-color: red;
+            text-align: center;
+            color: red;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 添加表格样式 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+        }
+
+        th,
+        td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            color: #333;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #eaeaea;
+        }
+
+        td:last-child {
+            text-align: center;
+            /* 如果最后一列需要居中显示，比如操作列 */
+        }
+
+        @media (max-width: 600px) {
+            font[color="white"][size="+2"] {
+                font-size: 1.2rem;
+            }
+        }
+
+        .container ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 260px;
+        }
+    </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="big">
+                <div id="banner">
+                    <ul>
+                        <li>
+                            <p id="day"></p>
+                        </li>
+                        <li>
+                            <p id="hour"></p>
+                        </li>
+                        <li>
+                            <p id="minute"></p>
+                        </li>
+                        <li>
+                            <p id="second"></p>
+                        </li>
+                        <li>
+                            <font id="dome1" color="red" size="+2">双十二秒杀即将开始!</font>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="big">
+                <div id="banner2">
+                    <ul>
+                        <li>
+                            <p id="2day"></p>
+                        </li>
+                        <li>
+                            <p id="2hour"></p>
+                        </li>
+                        <li>
+                            <p id="2minute"></p>
+                        </li>
+                        <li>
+                            <p id="2second"></p>
+                        </li>
+                        <li><span id="dome2" style="color: red; font-size: larger;">双十一秒杀活动已经截止!</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="big">
+                <div id="banner3">
+                    <ul>
+                        <li>
+                            <p id="3day"></p>
+                        </li>
+                        <li>
+                            <p id="3hour"></p>
+                        </li>
+                        <li>
+                            <p id="3minute"></p>
+                        </li>
+                        <li>
+                            <p id="3second"></p>
+                        </li>
+                        <li><span id="dome3" style="color: red; font-size: larger;">5.1秒杀活动已经截止!</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <p class="panel-title">秒杀活动</p>
+                </div>
+                <div class="panel-body">
+                    <table class="FlashPromotions-table" width="100%">
+                        <thead>
+                            <tr>
+                                <th width="20%">秒杀活动ID</th>
+                                <th width="20%">秒杀时间段名称</th>
+                                <th width="20%">开始日期</th>
+                                <th width="20%">结束日期</th>
+                                <th width="20%">上下线状态</th>
+                            </tr>
+                        </thead>
+                        <tbody class="FlashPromotions-body">
+                            <tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <span class="pull-right total-amount"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <script>
+            function startFixedCountdown(bannerIdPrefix, endTimeStr) {
+                var endTimeParts = endTimeStr.split(' ');
+                var dateParts = endTimeParts[0].split('-');
+                var timeParts = endTimeParts[1].split(':');
+                var oYear = dateParts[0] * 1;
+                var oMonth = dateParts[1] * 1 - 1;
+                var oDay = dateParts[2] * 1;
+                var oHour = timeParts[0] * 1;
+                var oMinute = timeParts[1] * 1;
+                var oSecond = timeParts[2] * 1 || 0;
+
+                var time = setInterval(function () {
+                    var presentDate = new Date();
+                    var futureTime = new Date(oYear, oMonth, oDay, oHour, oMinute, oSecond).getTime();
+                    var presentTime = presentDate.getTime();
+                    var allTime = futureTime - presentTime;
+
+                    if (allTime <= 0) {
+                        clearInterval(time);
+                        document.getElementById(bannerIdPrefix + 'day').innerHTML = '00';
+                        document.getElementById(bannerIdPrefix + 'hour').innerHTML = '00';
+                        document.getElementById(bannerIdPrefix + 'minute').innerHTML = '00';
+                        document.getElementById(bannerIdPrefix + 'second').innerHTML = '00';
+
+                        if (bannerIdPrefix === '2') {
+                            document.getElementById('dome2').innerText = '秒杀已经截止!';
+                        } else if (bannerIdPrefix === '3') {
+                            document.getElementById('dome3').innerText = '秒杀已经截止!';
+                        }
+                        return;
+                    }
+
+                    var allSecond = parseInt(allTime / 1000);
+                    var day = padZero(parseInt(allSecond / 3600 / 24));
+                    var hour = padZero(parseInt(allSecond / 3600 % 24));
+                    var minute = padZero(parseInt(allSecond / 60 % 60));
+                    var second = padZero(parseInt(allSecond % 60));
+
+                    document.getElementById(bannerIdPrefix + 'day').innerHTML = day;
+                    document.getElementById(bannerIdPrefix + 'hour').innerHTML = hour;
+                    document.getElementById(bannerIdPrefix + 'minute').innerHTML = minute;
+                    document.getElementById(bannerIdPrefix + 'second').innerHTML = second;
+                }, 1000);
+
+                function padZero(num) {
+                    return ('0' + num).slice(-2);
+                }
+            }
+
+            startFixedCountdown('', '2024-12-12 23:59:59');
+            startFixedCountdown('2', '2023-10-31 23:59:59');
+            startFixedCountdown('3', '2023-09-30 23:59:59');
+            function formatDate(date) {
+                var d = new Date(date);
+                var year = d.getFullYear();
+                var month = ("0" + (d.getMonth() + 1)).slice(-2);
+                var day = ("0" + d.getDate()).slice(-2);
+                return year + "-" + month + "-" + day;
+            }
+
+            $(document).ready(function () {
+                function loadFlashPromotions(keyword, pageNum, pageSize) {
+                    $.ajax({
+                        url: 'http://localhost:8080/flashPromotions', // 请替换为你的实际控制器URL
+                        type: 'GET',
+                        data: {
+                            keyword: keyword || '',
+                            pageNum: pageNum || 1,
+                            pageSize: pageSize || 10
+                        },
+                        dataType: 'json',
+                        success: function (response) {
+                            var tbody = $('.FlashPromotions-body');
+                            tbody.empty(); // 清空现有表格数据
+
+                            if (response.records && response.records.length > 0) {
+                                $.each(response.records, function (index, item) {
+                                    // 将日期转换为yyyy-MM-dd格式
+                                    var startDate = formatDate(item.startDate);
+                                    var endDate = formatDate(item.endDate);
+                                    // 使用格式化后的日期
+                                    var row = '<tr>' +
+                                        '<td>' + item.id + '</td>' +
+                                        '<td>' + item.title + '</td>' +
+                                        '<td>' + startDate + '</td>' + // 应用startDate变量
+                                        '<td>' + endDate + '</td>' +   // 应用endDate变量
+                                        '<td>' + (item.status ? '上线' : '下线') + '</td>' +
+                                        '</tr>';
+                                    tbody.append(row);
+                                });
+                            } else {
+                                tbody.append('<tr><td colspan="5" class="text-center">没有更多数据</td></tr>');
+                            }
+
+                            // 更新总记录数
+                            $('.total-amount').text('共 ' + response.total + ' 条记录');
+
+                            // 这里可以添加分页控件的更新逻辑，比如跳转到下一页或上一页的处理
+                        },
+                        error: function (xhr, status, error) {
+                            console.error("Error fetching data: ", error);
+                        }
+                    });
+                }
+
+                // 初始化加载第一页数据
+                loadFlashPromotions('', 1, 10);
+
+                // 你可以在这里添加分页控件的事件监听，比如点击下一页按钮时调用loadFlashPromotions(pageNum + 1)
+            });
+        </script>
+        <div class="clearfix"></div>
+        <footer class="footer">
+            <!-- 品质保障，私人定制等-->
+            <div class="text-center rights container">
+                <div class="col-md-offset-2 col-md-2">
+                    <span class="fa fa-thumbs-o-up"></span>
+                    <p>品质保障</p>
+                </div>
+                <div class="col-md-2">
+                    <span class="fa fa-address-card-o"></span>
+                    <p>私人订制</p>
+                </div>
+                <div class="col-md-2">
+                    <span class="fa fa-graduation-cap"></span>
+                    <p>学生特供</p>
+                </div>
+                <div class="col-md-2">
+                    <span class="fa fa-bitcoin"></span>
+                    <p>专属特权</p>
+                </div>
+            </div>
+            <!--联系我们、下载客户端等-->
+            <div class="container beforeBottom">
+                <div class="col-md-offset-1 col-md-3">
+                    <div><img src="../images/index/1.png" alt="" class="footLogo" width="150px" /></div>
+                    <div><img src="../images/index/footerFont.png" alt="" /></div>
+                </div>
+                <div class="col-md-4 callus text-center">
+                    <div class="col-md-4">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <p>买家帮助</p>
+                                </a>
+                            </li>
+                            <li><a href="#">新手指南</a></li>
+                            <li><a href="#">服务保障</a></li>
+                            <li><a href="#">常见问题</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <p>商家帮助</p>
+                                </a>
+                            </li>
+                            <li><a href="#">商家入驻</a></li>
+                            <li><a href="#">商家后台</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <p>关于我们</p>
+                                </a>
+                            </li>
+                            <li><a href="#">关于圆心</a></li>
+                            <li><a href="#">联系我们</a></li>
+                            <li>
+                                <span class="fa fa-wechat"></span>
+                                <span class="fa fa-weibo"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="col-md-5">
+                        <p>电脑商城客户端</p>
+                        <img src="../images/index/ios.png" class="lf">
+                        <img src="../images/index/android.png" alt="" class="lf" />
+                    </div>
+                    <div class="col-md-6">
+                        <img src="../images/index/1.png" width="200px">
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--页脚结束-->
+    </body>
+
+</html>

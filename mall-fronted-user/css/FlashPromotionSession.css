@@ -1,0 +1,54 @@
+
+.big {
+    flex: 1; /* 让每个模块根据容器宽度自适应 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* 为模块内部添加一些内边距 */
+}
+
+/* 移除#banner的固定宽高 */
+#banner, #banner2, #banner3 {
+    /* width: 702px;
+    height: 378px;   移除这些行 */
+    margin: 0 auto;
+    background-image: url("../images/index/1.png");
+    background-size: cover; /* 确保背景图片适应容器 */
+    background-position: center;
+}
+
+       #day, #hour, #minute, #second{
+            height: 60px;
+            width: 60px;
+            background-color: white;
+            text-align: center;
+            color: red;
+            border: 1px solid black;
+             flex: 1 1 auto;
+        }
+      
+        #2day,#2hour,#2minute,#2second{
+            height: 60px;
+            width: 60px;
+            background-color: white;
+            text-align: center;
+            color: red;
+            border: 1px solid black;
+             flex: 1 1 auto;
+        }
+        
+        #3day,#3hour,#3minute,#3second{
+            height: 60px;
+            width: 60px;
+            background-color: white;
+            text-align: center;
+            color: red;
+            border: 1px solid black;
+             flex: 1 1 auto;
+        }
+        @media (max-width: 600px) {
+         font[color="white"][size="+2"] {
+        font-size: 1.2rem; /* 在小屏上减小字体大小 */
+    }
+}

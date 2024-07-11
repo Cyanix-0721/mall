@@ -1,0 +1,18 @@
+<!--
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Register</title>
+    <link href="/webjars/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <h1>Register</h1>
+    <form method="post" th:action="@{/html/register}" th:object="${member}">
+        <input placeholder="Username" required th:field="*{username}" type="text">
+        <input placeholder="Password" required th:field="*{password}" type="password">
+        &lt;!&ndash; Add other fields as necessary &ndash;&gt;
+        <button type="submit">Register</button>
+    </form>
+    <p th:if="${error}" th:text="${error}"></p>
+</body>
+</html>-->

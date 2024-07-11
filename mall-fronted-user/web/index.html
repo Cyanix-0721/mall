@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!--edge浏览器H5兼容设置-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--360浏览器H5兼容设置-->
+  <meta name="renderer" content="webkit" />
+  <title>电脑商城</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--导入核心文件-->
+  <script src="../bootstrap3/js/holder.js"></script>
+  <link href="../bootstrap3/css/bootstrap.css" rel="stylesheet" type="text/css">
+  <script src="../bootstrap3/jquery-1.8.3.min.js"></script>
+  <script src="../bootstrap3/js/bootstrap.js"></script>
+  <script src="../js/menu.js" type="text/javascript" charset="utf-8"></script>
+  <!-- 字体图标 -->
+  <link rel="stylesheet" href="../bootstrap3/font-awesome-4.7.0/css/font-awesome.css" />
+  <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+  <link rel="stylesheet" type="text/css" href="../css/webindex.css" />
+  <link rel="stylesheet" type="text/css" href="../css/footer.css" />
+  <link rel="stylesheet" type="text/css" href="../css/top.css" />
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: Arial, sans-serif;
+    }
+
+    th,
+    td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+      color: #333;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr:hover {
+      background-color: #eaeaea;
+    }
+
+    td:last-child {
+      text-align: center;
+      /* 如果最后一列需要居中显示，比如操作列 */
+    }
+  </style>
+</head>
+
+<body>
+  <!--头部-->
+  <header class="header">
+    <!--电脑商城logo-->
+    <div class="row">
+      <div class="col-md-3">
+        <a href="index.html">
+          <img src="../images/index/1.png" width="250px" />
+        </a>
+      </div>
+      <!--快捷选项-->
+      <div class="col-md-9 top-item">
+        <ul class="list-inline pull-right">
+          <li><a href="favorites.html"><span class="fa fa-heart"></span>&nbsp;收藏</a></li>
+          <li class="li-split">|</li>
+          <li><a href="orders.html"><span class="fa fa-file-text"></span>&nbsp;订单</a></li>
+          <li class="li-split">|</li>
+          <li><a href="cart.html"><span class="fa fa-cart-plus"></span>&nbsp;购物车</a></li>
+          <li class="li-split">|</li>
+          <li>
+            <!--下列列表按钮 ：管理-->
+            <div class="btn-group">
+              <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                <span id="top-dropdown-btn"><span class="fa fa-gears"></span>&nbsp;管理 <span class="caret"></span></span>
+              </button>
+              <ul class="dropdown-menu top-dropdown-ul" role="menu">
+                <li><a href="password.html">修改密码</a></li>
+                <li><a href="userdata.html">个人资料</a></li>
+                <li><a href="upload.html">上传头像</a></li>
+                <li><a href="address.html">收货管理 </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="li-split">|</li>
+          <li><a href="login.html"><span class="fa fa-user"></span>&nbsp;登录</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!--导航 -->
+  <!--分割导航和顶部-->
+  <div class="row top-nav">
+    <div class="col-md-6">
+      <ul class="nav nav-pills">
+        <li>
+          <a href="#"></a>
+        </li>
+        <li class="active"><a href="index.html"><span class="fa fa-home"></span></a></li>
+        <li><a href="FlashPromotionSession.html">秒杀</a></li>
+        <li><a href="coupon.html">优惠券</a></li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <!-- 搜索表单 -->
+      <form id="searchForm">
+        <input type="text" id="searchTerm" placeholder="搜索商品...">
+        <button type="submit">搜索</button>
+      </form>
+    </div>
+  </div>
+  <!--头部结束-->
+  <!--导航结束-->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2" id="indexMenu">
+        <ul class="index-menu">
+        </ul>
+        <div id="showIndex">
+          <ul class="second-menu">
+            <li class="second-menu-li">####</li>
+          </ul>
+        </div>
+        <div id="showSecond">
+          <ul class="third-menu">
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-10">
+        <div id="myCarousel" class="carousel slide">
+          <!-- 轮播（Carousel）指标 -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+          </ol>
+          <!-- 轮播（Carousel）项目 -->
+          <div class="carousel-inner" align="center">
+            <div class="item active">
+              <img src="../images/index/index_banner1.png">
+            </div>
+            <div class="item">
+              <img src="../images/index/index_banner2.png">
+            </div>
+            <div class="item">
+              <img src="../images/index/index_banner3.png">
+            </div>
+            <div class="item">
+              <img src="../images/index/index_banner4.png">
+            </div>
+            <div class="item">
+              <img src="../images/index/index_banner5.png">
+            </div>
+          </div>
+          <!-- 轮播（Carousel）导航 -->
+          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!--推荐栏目-->
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>商品名称</th>
+            <th>商品图片</th>
+            <th>品牌名称</th>
+            <th>商品价格</th>
+            <th>商品货号</th>
+            <th>上架状态</th>
+            <th>新品状态</th>
+            <th>推荐状态</th>
+            <th>排序</th>
+            <th>库存</th>
+            <th>销量</th>
+          </tr>
+        </thead>
+        <tbody id="productList"></tbody>
+      </table>
+    </div>
+  </div>
+  <!--页脚开始-->
+  <footer class="footer">
+    <!-- 品质保障，私人定制等-->
+    <div class="text-center rights container">
+      <div class="col-md-offset-2 col-md-2">
+        <span class="fa fa-thumbs-o-up"></span>
+        <p>品质保障</p>
+      </div>
+      <div class="col-md-2">
+        <span class="fa fa-address-card-o"></span>
+        <p>私人订制</p>
+      </div>
+      <div class="col-md-2">
+        <span class="fa fa-graduation-cap"></span>
+        <p>学生特供</p>
+      </div>
+      <div class="col-md-2">
+        <span class="fa fa-bitcoin"></span>
+        <p>专属特权</p>
+      </div>
+    </div>
+    <!--联系我们、下载客户端等-->
+    <div class="container beforeBottom">
+      <div class="col-md-offset-1 col-md-3">
+        <div><img src="../images/index/1.png" alt="" class="footLogo" width="150px" /></div>
+        <div><img src="../images/index/footerFont.png" alt="" /></div>
+      </div>
+      <div class="col-md-4 callus text-center">
+        <div class="col-md-4">
+          <ul>
+            <li>
+              <a href="#">
+                <p>买家帮助</p>
+              </a>
+            </li>
+            <li><a href="#">新手指南</a></li>
+            <li><a href="#">服务保障</a></li>
+            <li><a href="#">常见问题</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul>
+            <li>
+              <a href="#">
+                <p>商家帮助</p>
+              </a>
+            </li>
+            <li><a href="#">商家入驻</a></li>
+            <li><a href="#">商家后台</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul>
+            <li>
+              <a href="#">
+                <p>关于我们</p>
+              </a>
+            </li>
+            <li><a href="#">关于圆心</a></li>
+            <li><a href="#">联系我们</a></li>
+            <li>
+              <span class="fa fa-wechat"></span>
+              <span class="fa fa-weibo"></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="col-md-5">
+          <p>电商平台客户端</p>
+          <img src="../images/index/ios.png" class="lf">
+          <img src="../images/index/android.png" alt="" class="lf" />
+        </div>
+        <div class="col-md-6">
+          <img src="../images/index/1.png" width="150px">
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!--页脚结束-->
+
+  <!-- 确保引入了fetch API支持或者polyfill -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // 初始化时发起Ajax请求
+      fetch('http://localhost:8080/product/list') // 默认第一页，每页5条
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('网络请求错误');
+          }
+          return response.json();
+        })
+        .then(data => {
+          const tbody = document.querySelector('table tbody');
+
+          // 清空现有内容
+          tbody.innerHTML = '';
+
+          // 填充数据
+          data.data.list.forEach(product => {
+            const row = `
+                        <tr>
+                            <td><a href="product.html">${product.name}</a></td>
+                            <td><img src="${product.pic}" alt="商品图片" style="max-width: 50px;"></td>
+                            <td>${product.brandName}</td>
+                            <td>${product.price}</td>
+                            <td>${product.productSn}</td>
+                            <td>${product.publishStatus ? '已上架' : '未上架'}</td>
+                            <td>${product.newStatus ? '新品' : ''}</td>
+                            <td>${product.recommandStatus ? '推荐' : ''}</td>
+                            <td>${product.sort}</td>
+                            <td>${product.stock}</td>
+                            <td>${product.sale}</td>
+                        </tr>
+                    `;
+            tbody.insertAdjacentHTML('beforeend', row);
+          });
+
+          // 如果有分页信息，可以在这里处理分页UI
+          // 例如: 更新总页数、上一页、下一页按钮的状态等
+        })
+        .catch(error => console.error('获取商品列表失败:', error));
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+      function searchProducts() {
+        // 获取用户输入或选择的参数
+        const keyword = document.getElementById('keywordInput').value || null; // 搜索关键词输入框的ID
+        const brandId = document.getElementById('brandSelect').value || null; // 品牌选择器的ID
+        const productCategoryId = document.getElementById('categorySelect').value || null; // 分类选择器的ID
+        const pageNum = 1; // 默认第一页
+        const pageSize = 5; // 默认每页5条
+        const sort = document.getElementById('sortSelect').value || 0; // 排序选择器的ID，默认按相关度
+
+        // 构造请求参数
+        const params = {
+          keyword: keyword,
+          brandId: brandId,
+          productCategoryId: productCategoryId,
+          pageNum: pageNum,
+          pageSize: pageSize,
+          sort: sort
+        };
+
+        // 发起Ajax请求
+        fetch('http://localhost:8080/product/search', { // 确保此处的URL与后端实际路径一致
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          // 将参数转换为查询字符串
+          body: new URLSearchParams(params).toString()
+        })
+          .then(response => {
+            if (!response.ok) {
+              throw new Error(`网络请求错误，状态码：${response.status}`);
+            }
+            return response.json();
+          })
+          .then(data => {
+            // 处理成功返回的数据，例如更新页面元素
+            console.log(data);
+            // 这里可以根据返回的data来动态更新页面上的商品列表
+            // 示例：清空并填充一个商品列表容器
+            const productListContainer = document.getElementById('productList');
+            productListContainer.innerHTML = ''; // 清空现有内容
+
+            // 假设data.result.list是商品列表数据
+            data.result.list.forEach(product => {
+              const row = `
+                        <tr>
+                            <td><a href="product.html">${product.name}</a></td>
+                            <td><img src="${product.pic}" alt="商品图片" style="max-width: 50px;"></td>
+                            <td>${product.brandName}</td>
+                            <td>${product.price}</td>
+                            <td>${product.productSn}</td>
+                            <td>${product.publishStatus ? '已上架' : '未上架'}</td>
+                            <td>${product.newStatus ? '新品' : ''}</td>
+                            <td>${product.recommandStatus ? '推荐' : ''}</td>
+                            <td>${product.sort}</td>
+                            <td>${product.stock}</td>
+                            <td>${product.sale}</td>
+                        </tr>
+                    `;
+              tbody.insertAdjacentHTML('beforeend', row);
+            });
+          })
+          .catch(error => console.error('搜索商品失败:', error));
+      }
+
+      // 假设有一个搜索按钮触发搜索操作
+      document.getElementById('searchBtn').addEventListener('click', searchProducts); // 搜索按钮的ID
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+      const searchForm = document.getElementById('searchForm');
+      const searchTerm = document.getElementById('searchTerm');
+      const productListTableBody = document.getElementById('productList');
+
+      // Initialize the product list with default data
+      fetchInitialData();
+
+      // Handle search form submission
+      searchForm.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent page reload on submit
+
+        const query = searchTerm.value.trim();
+        if (query) {
+          // Perform search and update the list
+          fetchDataAndRender(query);
+        }
+      });
+
+      // Fetch initial data from the server
+      function fetchInitialData() {
+        fetchDataAndRender('');
+      }
+
+      // Fetch data from the server based on a query and render the list
+      function fetchDataAndRender(query) {
+        let url = 'http://localhost:8080/product/list'; // Default URL for fetching all products
+
+        if (query) {
+          url += `?keyword=${encodeURIComponent(query)}`; // Append query parameter if there's a search term
+        }
+
+        fetch(url)
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('网络请求错误');
+            }
+            return response.json();
+          })
+          .then(data => {
+            updateProductTable(data.data.list || []); // Assuming the structure matches the previous examples
+          })
+          .catch(error => console.error('获取商品列表失败:', error));
+      }
+
+      // Renders the product table based on an array of products
+      function updateProductTable(products) {
+        productListTableBody.innerHTML = ''; // Clear existing rows
+
+        products.forEach(product => {
+          const row = `
+                <tr>
+                    <td><a href="product.html">${product.name}</a></td>
+                    <td><img src="${product.pic}" alt="商品图片" style="max-width: 50px;"></td>
+                    <td>${product.brandName}</td>
+                    <td>${product.price}</td>
+                    <td>${product.productSn}</td>
+                    <td>${product.publishStatus ? '已上架' : '未上架'}</td>
+                    <td>${product.newStatus ? '新品' : ''}</td>
+                    <td>${product.recommandStatus ? '推荐' : ''}</td>
+                    <td>${product.sort}</td>
+                    <td>${product.stock}</td>
+                    <td>${product.sale}</td>
+                </tr>
+            `;
+          productListTableBody.insertAdjacentHTML('beforeend', row);
+        });
+      }
+    });
+
+
+  </script>
+
+</body>
+
+</html>
