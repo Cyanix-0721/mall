@@ -1,7 +1,0 @@
-spring:
-  profiles:
-    active: captcha
-  redis:
-    host: localhost
-    port: 6379
-    password: 114514

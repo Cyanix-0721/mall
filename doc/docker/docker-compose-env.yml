@@ -1,0 +1,171 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:8
+    container_name: mysql
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - mysql_conf:/etc/mysql/conf.d
+      - mysql_log:/var/log/mysql
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1G
+
+  redis:
+    image: redis:7
+    container_name: redis
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+    ports:
+      - "6379:6379"
+    environment:
+      - REDIS_PASSWORD=114514
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+
+  nginx:
+    build:
+      context: ../..
+      dockerfile: doc/docker/Dockerfile.nginx
+    container_name: nginx
+    volumes:
+      - nginx_html:/usr/share/nginx/html
+      - nginx_log:/var/log/nginx
+    ports:
+      - "80:80"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+
+  rabbitmq:
+    build:
+      context: ../..
+      dockerfile: doc/docker/Dockerfile.rabbitmq
+    container_name: rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: 114514
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+      - rabbitmq_log:/var/log/rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+
+  elasticsearch:
+    image: elasticsearch:7.17.24
+    container_name: elasticsearch
+    environment:
+      - "cluster.name=elasticsearch"
+      - "discovery.type=single-node"
+      - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
+    volumes:
+      - elasticsearch_plugins:/usr/share/elasticsearch/plugins
+      - elasticsearch_data:/usr/share/elasticsearch/data
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1G
+
+  logstash:
+    build:
+      context: ../..
+      dockerfile: doc/docker/Dockerfile.logstash
+    container_name: logstash
+    environment:
+      - TZ=Asia/Shanghai
+    depends_on:
+      - elasticsearch
+    links:
+      - elasticsearch:es
+    ports:
+      - "4560:4560"
+      - "4561:4561"
+      - "4562:4562"
+      - "4563:4563"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+
+  kibana:
+    image: kibana:7.17.24
+    container_name: kibana
+    links:
+      - elasticsearch:es
+    depends_on:
+      - elasticsearch
+    environment:
+      - "elasticsearch.hosts=http://es:9200"
+    ports:
+      - "5601:5601"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+
+  mongo:
+    image: mongo:4
+    container_name: mongo
+    volumes:
+      - mongo_data:/data/db
+      - mongo_config:/data/configdb
+    ports:
+      - "27017:27017"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+
+  nacos-registry:
+    image: nacos/nacos-server:v2.4.2
+    container_name: nacos-registry
+    environment:
+      - "MODE=standalone"
+    ports:
+      - "8848:8848"
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 2G
+
+volumes:
+  mysql_data:
+  mysql_conf:
+  mysql_log:
+  redis_data:
+  nginx_html:
+  nginx_log:
+  rabbitmq_data:
+  rabbitmq_log:
+  elasticsearch_plugins:
+  elasticsearch_data:
+  mongo_data:
+  mongo_config:
