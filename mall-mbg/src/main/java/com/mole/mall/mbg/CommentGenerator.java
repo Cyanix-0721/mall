@@ -1,4 +1,4 @@
-package com.mole.mall;
+package com.mole.mall.mbg;
 
 import org.mybatis.generator.api.IntrospectedColumn;
 import org.mybatis.generator.api.IntrospectedTable;

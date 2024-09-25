@@ -16,18 +16,18 @@
 
         <!-- 插件：为模型生成序列化方法 -->
         <!--        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>-->
-        <plugin type="com.mole.mall.CustomSerializablePlugin"/>
+        <plugin type="com.mole.mall.mbg.CustomSerializablePlugin"/>
         <!-- 插件：为生成的Java模型创建一个toString方法 -->
         <!--         <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/> -->
         <!-- 插件：为生成的Java模型添加Lombok注解 -->
-        <plugin type="com.mole.mall.LombokPlugin"/>
+        <plugin type="com.mole.mall.mbg.LombokPlugin"/>
         <!-- 插件：为生成的Java模型删除get/set方法 -->
-        <plugin type="com.mole.mall.RemoveMethodsPlugin"/>
+        <plugin type="com.mole.mall.mbg.RemoveMethodsPlugin"/>
         <!-- 插件：生成mapper.xml时覆盖原文件 -->
         <plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin"/>
 
         <!-- 自定义注释生成器配置 -->
-        <commentGenerator type="com.mole.mall.CommentGenerator">
+        <commentGenerator type="com.mole.mall.mbg.CommentGenerator">
             <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
             <property name="suppressAllComments" value="true"/>
             <!-- 是否去除生成的注释中的日期 -->
@@ -46,13 +46,15 @@
         </jdbcConnection>
 
         <!-- Java模型生成器配置 -->
-        <javaModelGenerator targetPackage="com.mole.mall.model" targetProject="mall-mbg\src\main\java"/>
+        <javaModelGenerator targetPackage="com.mole.mall.mbg.pojo" targetProject="mall-mbg\src\main\java">
+            <property name="useJSR310Types" value="true"/>
+        </javaModelGenerator>
 
         <!-- SQL映射文件生成器配置 -->
-        <sqlMapGenerator targetPackage="com.mole.mall.mapper" targetProject="mall-mbg\src\main\resources"/>
+        <sqlMapGenerator targetPackage="com.mole.mall.mbg.mapper" targetProject="mall-mbg\src\main\resources"/>
 
         <!-- Java客户端生成器配置 -->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.mole.mall.mapper"
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.mole.mall.mbg.mapper"
                              targetProject="mall-mbg\src\main\java"/>
 
         <!-- 表配置，生成全部表的代码 -->
