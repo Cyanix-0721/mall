@@ -75,10 +75,10 @@ CREATE TABLE `cms_member_report`  (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for cms_prefrence_area
+-- Table structure for cms_preference_area
 -- ----------------------------
-DROP TABLE IF EXISTS `cms_prefrence_area`;
-CREATE TABLE `cms_prefrence_area`  (
+DROP TABLE IF EXISTS `cms_preference_area`;
+CREATE TABLE `cms_preference_area`  (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `sub_title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
@@ -89,35 +89,35 @@ CREATE TABLE `cms_prefrence_area`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '优选专区' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
--- Records of cms_prefrence_area
+-- Records of cms_preference_area
 -- ----------------------------
-INSERT INTO `cms_prefrence_area` VALUES (1, '让音质更出众', '音质不打折 完美现场感', NULL, NULL, 1);
-INSERT INTO `cms_prefrence_area` VALUES (2, '让音质更出众22', '让音质更出众22', NULL, NULL, NULL);
-INSERT INTO `cms_prefrence_area` VALUES (3, '让音质更出众33', NULL, NULL, NULL, NULL);
-INSERT INTO `cms_prefrence_area` VALUES (4, '让音质更出众44', NULL, NULL, NULL, NULL);
+INSERT INTO `cms_preference_area` VALUES (1, '让音质更出众', '音质不打折 完美现场感', NULL, NULL, 1);
+INSERT INTO `cms_preference_area` VALUES (2, '让音质更出众22', '让音质更出众22', NULL, NULL, NULL);
+INSERT INTO `cms_preference_area` VALUES (3, '让音质更出众33', NULL, NULL, NULL, NULL);
+INSERT INTO `cms_preference_area` VALUES (4, '让音质更出众44', NULL, NULL, NULL, NULL);
 
 -- ----------------------------
--- Table structure for cms_prefrence_area_product_relation
+-- Table structure for cms_preference_area_product_relation
 -- ----------------------------
-DROP TABLE IF EXISTS `cms_prefrence_area_product_relation`;
-CREATE TABLE `cms_prefrence_area_product_relation`  (
+DROP TABLE IF EXISTS `cms_preference_area_product_relation`;
+CREATE TABLE `cms_preference_area_product_relation`  (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `prefrence_area_id` bigint(20) NULL DEFAULT NULL,
+  `preference_area_id` bigint(20) NULL DEFAULT NULL,
   `product_id` bigint(20) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 25 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '优选专区和产品关系表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
--- Records of cms_prefrence_area_product_relation
+-- Records of cms_preference_area_product_relation
 -- ----------------------------
-INSERT INTO `cms_prefrence_area_product_relation` VALUES (1, 1, 12);
-INSERT INTO `cms_prefrence_area_product_relation` VALUES (2, 1, 13);
-INSERT INTO `cms_prefrence_area_product_relation` VALUES (3, 1, 14);
-INSERT INTO `cms_prefrence_area_product_relation` VALUES (4, 1, 18);
-INSERT INTO `cms_prefrence_area_product_relation` VALUES (5, 1, 7);
-INSERT INTO `cms_prefrence_area_product_relation` VALUES (6, 2, 7);
-INSERT INTO `cms_prefrence_area_product_relation` VALUES (7, 1, 22);
-INSERT INTO `cms_prefrence_area_product_relation` VALUES (24, 1, 23);
+INSERT INTO `cms_preference_area_product_relation` VALUES (1, 1, 12);
+INSERT INTO `cms_preference_area_product_relation` VALUES (2, 1, 13);
+INSERT INTO `cms_preference_area_product_relation` VALUES (3, 1, 14);
+INSERT INTO `cms_preference_area_product_relation` VALUES (4, 1, 18);
+INSERT INTO `cms_preference_area_product_relation` VALUES (5, 1, 7);
+INSERT INTO `cms_preference_area_product_relation` VALUES (6, 2, 7);
+INSERT INTO `cms_preference_area_product_relation` VALUES (7, 1, 22);
+INSERT INTO `cms_preference_area_product_relation` VALUES (24, 1, 23);
 
 -- ----------------------------
 -- Table structure for cms_subject
@@ -3056,7 +3056,7 @@ INSERT INTO `ums_resource` VALUES (19, '2020-02-07 16:40:34', '首页品牌管�
 INSERT INTO `ums_resource` VALUES (20, '2020-02-07 16:41:06', '首页新品管理', '/home/newProduct/**', '', 3);
 INSERT INTO `ums_resource` VALUES (21, '2020-02-07 16:42:16', '首页人气推荐管理', '/home/recommendProduct/**', '', 3);
 INSERT INTO `ums_resource` VALUES (22, '2020-02-07 16:42:48', '首页专题推荐管理', '/home/recommendSubject/**', '', 3);
-INSERT INTO `ums_resource` VALUES (23, '2020-02-07 16:44:56', ' 商品优选管理', '/prefrenceArea/**', '', 5);
+INSERT INTO `ums_resource` VALUES (23, '2020-02-07 16:44:56', ' 商品优选管理', '/preferenceArea/**', '', 5);
 INSERT INTO `ums_resource` VALUES (24, '2020-02-07 16:45:39', '商品专题管理', '/subject/**', '', 5);
 INSERT INTO `ums_resource` VALUES (25, '2020-02-07 16:47:34', '后台用户管理', '/admin/**', '', 4);
 INSERT INTO `ums_resource` VALUES (26, '2020-02-07 16:48:24', '后台用户角色管理', '/role/**', '', 4);
