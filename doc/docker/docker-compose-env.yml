@@ -35,12 +35,10 @@ services:
           memory: 512M
 
   nginx:
-    build:
-      context: ../..
-      dockerfile: doc/docker/Dockerfile.nginx
-    image: mall_nginx:latest
+    image: nginx:1.27
     container_name: nginx
     volumes:
+      - ${PWD}../../doc/nginx/nginx.conf /etc/nginx/nginx.conf
       - nginx_html:/usr/share/nginx/html
       - nginx_log:/var/log/nginx
     ports:
@@ -55,7 +53,7 @@ services:
     build:
       context: ../..
       dockerfile: doc/docker/Dockerfile.rabbitmq
-    image: mall_rabbitmq:latest
+    image: rabbitmq_delay:3.13
     container_name: rabbitmq
     environment:
       RABBITMQ_DEFAULT_USER: admin
@@ -92,10 +90,9 @@ services:
           memory: 1G
 
   logstash:
-    build:
-      context: ../..
-      dockerfile: doc/docker/Dockerfile.logstash
-    image: mall_logstash:latest
+    image: logstash:7.17.24
+    volumes:
+      - ${PWD}../../doc/elk/logstash.conf /usr/share/logstash/pipeline/logstash.conf
     container_name: logstash
     environment:
       - TZ=Asia/Shanghai

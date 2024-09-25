@@ -42,7 +42,7 @@
         <mybatis-spring-boot-starter.version>3.0.3</mybatis-spring-boot-starter.version>
         <mybatis-generator.version>1.4.2</mybatis-generator.version>
         <pagehelper-starter.version>2.1.0</pagehelper-starter.version>
-        <mysql-connector.version>8.0.29</mysql-connector.version>
+        <mysql-connector.version>8.4.0</mysql-connector.version>
         <spring-data-commons.version>3.2.2</spring-data-commons.version>
         <aliyun-oss.version>2.5.0</aliyun-oss.version>
         <alipay-sdk.version>4.38.61.ALL</alipay-sdk.version>
@@ -153,8 +153,8 @@
             </dependency>
             <!--Mysql数据库驱动-->
             <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
+                <groupId>com.mysql</groupId>
+                <artifactId>mysql-connector-j</artifactId>
                 <version>${mysql-connector.version}</version>
             </dependency>
             <!--SpringData工具包-->
