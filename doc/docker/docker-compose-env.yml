@@ -1,4 +1,3 @@
-version: '3'
 services:
   mysql:
     image: mysql:8
@@ -39,6 +38,7 @@ services:
     build:
       context: ../..
       dockerfile: doc/docker/Dockerfile.nginx
+    image: mall_nginx:latest
     container_name: nginx
     volumes:
       - nginx_html:/usr/share/nginx/html
@@ -55,6 +55,7 @@ services:
     build:
       context: ../..
       dockerfile: doc/docker/Dockerfile.rabbitmq
+    image: mall_rabbitmq:latest
     container_name: rabbitmq
     environment:
       RABBITMQ_DEFAULT_USER: admin
@@ -94,6 +95,7 @@ services:
     build:
       context: ../..
       dockerfile: doc/docker/Dockerfile.logstash
+    image: mall_logstash:latest
     container_name: logstash
     environment:
       - TZ=Asia/Shanghai
