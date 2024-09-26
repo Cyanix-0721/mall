@@ -1,7 +1,7 @@
 package com.mole.mall.mbg.pojo;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class SmsCouponHistoryExample {
@@ -495,52 +495,52 @@ public class SmsCouponHistoryExample {
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeEqualTo(Date value) {
+        public Criteria andCreateTimeEqualTo(LocalDateTime value) {
             addCriterion("create_time =", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeNotEqualTo(Date value) {
+        public Criteria andCreateTimeNotEqualTo(LocalDateTime value) {
             addCriterion("create_time <>", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeGreaterThan(Date value) {
+        public Criteria andCreateTimeGreaterThan(LocalDateTime value) {
             addCriterion("create_time >", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeGreaterThanOrEqualTo(Date value) {
+        public Criteria andCreateTimeGreaterThanOrEqualTo(LocalDateTime value) {
             addCriterion("create_time >=", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeLessThan(Date value) {
+        public Criteria andCreateTimeLessThan(LocalDateTime value) {
             addCriterion("create_time <", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeLessThanOrEqualTo(Date value) {
+        public Criteria andCreateTimeLessThanOrEqualTo(LocalDateTime value) {
             addCriterion("create_time <=", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeIn(List<Date> values) {
+        public Criteria andCreateTimeIn(List<LocalDateTime> values) {
             addCriterion("create_time in", values, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeNotIn(List<Date> values) {
+        public Criteria andCreateTimeNotIn(List<LocalDateTime> values) {
             addCriterion("create_time not in", values, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeBetween(Date value1, Date value2) {
+        public Criteria andCreateTimeBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("create_time between", value1, value2, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeNotBetween(Date value1, Date value2) {
+        public Criteria andCreateTimeNotBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("create_time not between", value1, value2, "createTime");
             return (Criteria) this;
         }
@@ -615,52 +615,52 @@ public class SmsCouponHistoryExample {
             return (Criteria) this;
         }
 
-        public Criteria andUseTimeEqualTo(Date value) {
+        public Criteria andUseTimeEqualTo(LocalDateTime value) {
             addCriterion("use_time =", value, "useTime");
             return (Criteria) this;
         }
 
-        public Criteria andUseTimeNotEqualTo(Date value) {
+        public Criteria andUseTimeNotEqualTo(LocalDateTime value) {
             addCriterion("use_time <>", value, "useTime");
             return (Criteria) this;
         }
 
-        public Criteria andUseTimeGreaterThan(Date value) {
+        public Criteria andUseTimeGreaterThan(LocalDateTime value) {
             addCriterion("use_time >", value, "useTime");
             return (Criteria) this;
         }
 
-        public Criteria andUseTimeGreaterThanOrEqualTo(Date value) {
+        public Criteria andUseTimeGreaterThanOrEqualTo(LocalDateTime value) {
             addCriterion("use_time >=", value, "useTime");
             return (Criteria) this;
         }
 
-        public Criteria andUseTimeLessThan(Date value) {
+        public Criteria andUseTimeLessThan(LocalDateTime value) {
             addCriterion("use_time <", value, "useTime");
             return (Criteria) this;
         }
 
-        public Criteria andUseTimeLessThanOrEqualTo(Date value) {
+        public Criteria andUseTimeLessThanOrEqualTo(LocalDateTime value) {
             addCriterion("use_time <=", value, "useTime");
             return (Criteria) this;
         }
 
-        public Criteria andUseTimeIn(List<Date> values) {
+        public Criteria andUseTimeIn(List<LocalDateTime> values) {
             addCriterion("use_time in", values, "useTime");
             return (Criteria) this;
         }
 
-        public Criteria andUseTimeNotIn(List<Date> values) {
+        public Criteria andUseTimeNotIn(List<LocalDateTime> values) {
             addCriterion("use_time not in", values, "useTime");
             return (Criteria) this;
         }
 
-        public Criteria andUseTimeBetween(Date value1, Date value2) {
+        public Criteria andUseTimeBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("use_time between", value1, value2, "useTime");
             return (Criteria) this;
         }
 
-        public Criteria andUseTimeNotBetween(Date value1, Date value2) {
+        public Criteria andUseTimeNotBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("use_time not between", value1, value2, "useTime");
             return (Criteria) this;
         }

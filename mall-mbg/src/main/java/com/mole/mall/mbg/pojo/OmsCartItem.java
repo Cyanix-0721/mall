@@ -4,7 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -43,10 +43,10 @@ public class OmsCartItem implements Serializable {
     private String memberNickname;
 
     @Schema(title = "创建时间")
-    private Date createDate;
+    private LocalDateTime createDate;
 
     @Schema(title = "修改时间")
-    private Date modifyDate;
+    private LocalDateTime modifyDate;
 
     @Schema(title = "是否删除")
     private Integer deleteStatus;

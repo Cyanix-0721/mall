@@ -4,7 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -99,10 +99,10 @@ public class PmsProduct implements Serializable {
     private String detailTitle;
 
     @Schema(title = "促销开始时间")
-    private Date promotionStartTime;
+    private LocalDateTime promotionStartTime;
 
     @Schema(title = "促销结束时间")
-    private Date promotionEndTime;
+    private LocalDateTime promotionEndTime;
 
     @Schema(title = "活动限购数量")
     private Integer promotionPerLimit;

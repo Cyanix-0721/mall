@@ -3,7 +3,7 @@ package com.mole.mall.mbg.pojo;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.Serial;
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -26,13 +26,13 @@ public class SmsCouponHistory implements Serializable {
     @Schema(title = "获取类型：0->后台赠送；1->主动获取")
     private Integer getType;
 
-    private Date createTime;
+    private LocalDateTime createTime;
 
     @Schema(title = "使用状态：0->未使用；1->已使用；2->已过期")
     private Integer useStatus;
 
     @Schema(title = "使用时间")
-    private Date useTime;
+    private LocalDateTime useTime;
 
     @Schema(title = "订单编号")
     private Long orderId;

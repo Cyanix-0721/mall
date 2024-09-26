@@ -3,7 +3,7 @@ package com.mole.mall.mbg.pojo;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.Serial;
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,7 +23,7 @@ public class OmsOrderReturnReason implements Serializable {
     private Integer status;
 
     @Schema(title = "添加时间")
-    private Date createTime;
+    private LocalDateTime createTime;
 
     @Serial
     private static final long serialVersionUID = 1L;

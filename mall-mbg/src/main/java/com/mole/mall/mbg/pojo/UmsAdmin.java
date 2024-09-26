@@ -3,7 +3,7 @@ package com.mole.mall.mbg.pojo;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.Serial;
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -31,10 +31,10 @@ public class UmsAdmin implements Serializable {
     private String note;
 
     @Schema(title = "创建时间")
-    private Date createTime;
+    private LocalDateTime createTime;
 
     @Schema(title = "最后登录时间")
-    private Date loginTime;
+    private LocalDateTime loginTime;
 
     @Schema(title = "帐号启用状态：0->禁用；1->启用")
     private Integer status;

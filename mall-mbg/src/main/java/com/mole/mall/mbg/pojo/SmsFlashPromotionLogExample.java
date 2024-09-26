@@ -1,7 +1,7 @@
 package com.mole.mall.mbg.pojo;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class SmsFlashPromotionLogExample {
@@ -435,52 +435,52 @@ public class SmsFlashPromotionLogExample {
             return (Criteria) this;
         }
 
-        public Criteria andSubscribeTimeEqualTo(Date value) {
+        public Criteria andSubscribeTimeEqualTo(LocalDateTime value) {
             addCriterion("subscribe_time =", value, "subscribeTime");
             return (Criteria) this;
         }
 
-        public Criteria andSubscribeTimeNotEqualTo(Date value) {
+        public Criteria andSubscribeTimeNotEqualTo(LocalDateTime value) {
             addCriterion("subscribe_time <>", value, "subscribeTime");
             return (Criteria) this;
         }
 
-        public Criteria andSubscribeTimeGreaterThan(Date value) {
+        public Criteria andSubscribeTimeGreaterThan(LocalDateTime value) {
             addCriterion("subscribe_time >", value, "subscribeTime");
             return (Criteria) this;
         }
 
-        public Criteria andSubscribeTimeGreaterThanOrEqualTo(Date value) {
+        public Criteria andSubscribeTimeGreaterThanOrEqualTo(LocalDateTime value) {
             addCriterion("subscribe_time >=", value, "subscribeTime");
             return (Criteria) this;
         }
 
-        public Criteria andSubscribeTimeLessThan(Date value) {
+        public Criteria andSubscribeTimeLessThan(LocalDateTime value) {
             addCriterion("subscribe_time <", value, "subscribeTime");
             return (Criteria) this;
         }
 
-        public Criteria andSubscribeTimeLessThanOrEqualTo(Date value) {
+        public Criteria andSubscribeTimeLessThanOrEqualTo(LocalDateTime value) {
             addCriterion("subscribe_time <=", value, "subscribeTime");
             return (Criteria) this;
         }
 
-        public Criteria andSubscribeTimeIn(List<Date> values) {
+        public Criteria andSubscribeTimeIn(List<LocalDateTime> values) {
             addCriterion("subscribe_time in", values, "subscribeTime");
             return (Criteria) this;
         }
 
-        public Criteria andSubscribeTimeNotIn(List<Date> values) {
+        public Criteria andSubscribeTimeNotIn(List<LocalDateTime> values) {
             addCriterion("subscribe_time not in", values, "subscribeTime");
             return (Criteria) this;
         }
 
-        public Criteria andSubscribeTimeBetween(Date value1, Date value2) {
+        public Criteria andSubscribeTimeBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("subscribe_time between", value1, value2, "subscribeTime");
             return (Criteria) this;
         }
 
-        public Criteria andSubscribeTimeNotBetween(Date value1, Date value2) {
+        public Criteria andSubscribeTimeNotBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("subscribe_time not between", value1, value2, "subscribeTime");
             return (Criteria) this;
         }
@@ -495,52 +495,52 @@ public class SmsFlashPromotionLogExample {
             return (Criteria) this;
         }
 
-        public Criteria andSendTimeEqualTo(Date value) {
+        public Criteria andSendTimeEqualTo(LocalDateTime value) {
             addCriterion("send_time =", value, "sendTime");
             return (Criteria) this;
         }
 
-        public Criteria andSendTimeNotEqualTo(Date value) {
+        public Criteria andSendTimeNotEqualTo(LocalDateTime value) {
             addCriterion("send_time <>", value, "sendTime");
             return (Criteria) this;
         }
 
-        public Criteria andSendTimeGreaterThan(Date value) {
+        public Criteria andSendTimeGreaterThan(LocalDateTime value) {
             addCriterion("send_time >", value, "sendTime");
             return (Criteria) this;
         }
 
-        public Criteria andSendTimeGreaterThanOrEqualTo(Date value) {
+        public Criteria andSendTimeGreaterThanOrEqualTo(LocalDateTime value) {
             addCriterion("send_time >=", value, "sendTime");
             return (Criteria) this;
         }
 
-        public Criteria andSendTimeLessThan(Date value) {
+        public Criteria andSendTimeLessThan(LocalDateTime value) {
             addCriterion("send_time <", value, "sendTime");
             return (Criteria) this;
         }
 
-        public Criteria andSendTimeLessThanOrEqualTo(Date value) {
+        public Criteria andSendTimeLessThanOrEqualTo(LocalDateTime value) {
             addCriterion("send_time <=", value, "sendTime");
             return (Criteria) this;
         }
 
-        public Criteria andSendTimeIn(List<Date> values) {
+        public Criteria andSendTimeIn(List<LocalDateTime> values) {
             addCriterion("send_time in", values, "sendTime");
             return (Criteria) this;
         }
 
-        public Criteria andSendTimeNotIn(List<Date> values) {
+        public Criteria andSendTimeNotIn(List<LocalDateTime> values) {
             addCriterion("send_time not in", values, "sendTime");
             return (Criteria) this;
         }
 
-        public Criteria andSendTimeBetween(Date value1, Date value2) {
+        public Criteria andSendTimeBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("send_time between", value1, value2, "sendTime");
             return (Criteria) this;
         }
 
-        public Criteria andSendTimeNotBetween(Date value1, Date value2) {
+        public Criteria andSendTimeNotBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("send_time not between", value1, value2, "sendTime");
             return (Criteria) this;
         }

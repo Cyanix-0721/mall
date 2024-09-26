@@ -4,7 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -37,7 +37,7 @@ public class PmsProductOperateLog implements Serializable {
     @Schema(title = "操作人")
     private String operateMan;
 
-    private Date createTime;
+    private LocalDateTime createTime;
 
     @Serial
     private static final long serialVersionUID = 1L;

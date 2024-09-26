@@ -4,7 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -52,7 +52,7 @@ public class UmsMemberStatisticsInfo implements Serializable {
     private Integer inviteFriendCount;
 
     @Schema(title = "最后一次下订单时间")
-    private Date recentOrderTime;
+    private LocalDateTime recentOrderTime;
 
     @Serial
     private static final long serialVersionUID = 1L;

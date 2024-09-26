@@ -2,7 +2,6 @@
 <!DOCTYPE generatorConfiguration
         PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
-
 <generatorConfiguration>
     <!-- 引用外部属性文件 -->
     <properties resource="generator.properties"/>
@@ -18,7 +17,9 @@
         <!--        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>-->
         <plugin type="com.mole.mall.mbg.CustomSerializablePlugin"/>
         <!-- 插件：为生成的Java模型创建一个toString方法 -->
-        <!--         <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/> -->
+        <!--        <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>-->
+        <!-- 插件：为生成的Java模型增加equals和hashCode方法 -->
+        <!--        <plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"/>-->
         <!-- 插件：为生成的Java模型添加Lombok注解 -->
         <plugin type="com.mole.mall.mbg.LombokPlugin"/>
         <!-- 插件：为生成的Java模型删除get/set方法 -->
@@ -45,17 +46,30 @@
             <property name="nullCatalogMeansCurrent" value="true"/>
         </jdbcConnection>
 
+        <javaTypeResolver>
+            <!-- 类型解析器 -->
+            <property name="forceBigDecimals" value="false"/>
+            <property name="useJSR310Types" value="true"/>
+        </javaTypeResolver>
+
         <!-- Java模型生成器配置 -->
         <javaModelGenerator targetPackage="com.mole.mall.mbg.pojo" targetProject="mall-mbg\src\main\java">
-            <property name="useJSR310Types" value="true"/>
+            <!-- 是否让schema作为包后缀 -->
+            <property name="enableSubPackages" value="false"/>
+            <!-- 从数据库返回的值被清理前后的空格 -->
+            <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
         <!-- SQL映射文件生成器配置 -->
-        <sqlMapGenerator targetPackage="com.mole.mall.mbg.mapper" targetProject="mall-mbg\src\main\resources"/>
+        <sqlMapGenerator targetPackage="mapper" targetProject="mall-mbg\src\main\resources">
+            <property name="enableSubPackages" value="false"/>
+        </sqlMapGenerator>
 
         <!-- Java客户端生成器配置 -->
         <javaClientGenerator type="XMLMAPPER" targetPackage="com.mole.mall.mbg.mapper"
-                             targetProject="mall-mbg\src\main\java"/>
+                             targetProject="mall-mbg\src\main\java">
+            <property name="enableSubPackages" value="false"/>
+        </javaClientGenerator>
 
         <!-- 表配置，生成全部表的代码 -->
         <table tableName="%">

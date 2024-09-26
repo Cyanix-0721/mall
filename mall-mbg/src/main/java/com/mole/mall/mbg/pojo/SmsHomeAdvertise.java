@@ -3,7 +3,7 @@ package com.mole.mall.mbg.pojo;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.Serial;
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,9 +21,9 @@ public class SmsHomeAdvertise implements Serializable {
 
     private String pic;
 
-    private Date startTime;
+    private LocalDateTime startTime;
 
-    private Date endTime;
+    private LocalDateTime endTime;
 
     @Schema(title = "上下线状态：0->下线；1->上线")
     private Integer status;

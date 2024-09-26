@@ -1,8 +1,8 @@
 package com.mole.mall.mbg.pojo;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class OmsCartItemExample {
@@ -826,52 +826,52 @@ public class OmsCartItemExample {
             return (Criteria) this;
         }
 
-        public Criteria andCreateDateEqualTo(Date value) {
+        public Criteria andCreateDateEqualTo(LocalDateTime value) {
             addCriterion("create_date =", value, "createDate");
             return (Criteria) this;
         }
 
-        public Criteria andCreateDateNotEqualTo(Date value) {
+        public Criteria andCreateDateNotEqualTo(LocalDateTime value) {
             addCriterion("create_date <>", value, "createDate");
             return (Criteria) this;
         }
 
-        public Criteria andCreateDateGreaterThan(Date value) {
+        public Criteria andCreateDateGreaterThan(LocalDateTime value) {
             addCriterion("create_date >", value, "createDate");
             return (Criteria) this;
         }
 
-        public Criteria andCreateDateGreaterThanOrEqualTo(Date value) {
+        public Criteria andCreateDateGreaterThanOrEqualTo(LocalDateTime value) {
             addCriterion("create_date >=", value, "createDate");
             return (Criteria) this;
         }
 
-        public Criteria andCreateDateLessThan(Date value) {
+        public Criteria andCreateDateLessThan(LocalDateTime value) {
             addCriterion("create_date <", value, "createDate");
             return (Criteria) this;
         }
 
-        public Criteria andCreateDateLessThanOrEqualTo(Date value) {
+        public Criteria andCreateDateLessThanOrEqualTo(LocalDateTime value) {
             addCriterion("create_date <=", value, "createDate");
             return (Criteria) this;
         }
 
-        public Criteria andCreateDateIn(List<Date> values) {
+        public Criteria andCreateDateIn(List<LocalDateTime> values) {
             addCriterion("create_date in", values, "createDate");
             return (Criteria) this;
         }
 
-        public Criteria andCreateDateNotIn(List<Date> values) {
+        public Criteria andCreateDateNotIn(List<LocalDateTime> values) {
             addCriterion("create_date not in", values, "createDate");
             return (Criteria) this;
         }
 
-        public Criteria andCreateDateBetween(Date value1, Date value2) {
+        public Criteria andCreateDateBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("create_date between", value1, value2, "createDate");
             return (Criteria) this;
         }
 
-        public Criteria andCreateDateNotBetween(Date value1, Date value2) {
+        public Criteria andCreateDateNotBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("create_date not between", value1, value2, "createDate");
             return (Criteria) this;
         }
@@ -886,52 +886,52 @@ public class OmsCartItemExample {
             return (Criteria) this;
         }
 
-        public Criteria andModifyDateEqualTo(Date value) {
+        public Criteria andModifyDateEqualTo(LocalDateTime value) {
             addCriterion("modify_date =", value, "modifyDate");
             return (Criteria) this;
         }
 
-        public Criteria andModifyDateNotEqualTo(Date value) {
+        public Criteria andModifyDateNotEqualTo(LocalDateTime value) {
             addCriterion("modify_date <>", value, "modifyDate");
             return (Criteria) this;
         }
 
-        public Criteria andModifyDateGreaterThan(Date value) {
+        public Criteria andModifyDateGreaterThan(LocalDateTime value) {
             addCriterion("modify_date >", value, "modifyDate");
             return (Criteria) this;
         }
 
-        public Criteria andModifyDateGreaterThanOrEqualTo(Date value) {
+        public Criteria andModifyDateGreaterThanOrEqualTo(LocalDateTime value) {
             addCriterion("modify_date >=", value, "modifyDate");
             return (Criteria) this;
         }
 
-        public Criteria andModifyDateLessThan(Date value) {
+        public Criteria andModifyDateLessThan(LocalDateTime value) {
             addCriterion("modify_date <", value, "modifyDate");
             return (Criteria) this;
         }
 
-        public Criteria andModifyDateLessThanOrEqualTo(Date value) {
+        public Criteria andModifyDateLessThanOrEqualTo(LocalDateTime value) {
             addCriterion("modify_date <=", value, "modifyDate");
             return (Criteria) this;
         }
 
-        public Criteria andModifyDateIn(List<Date> values) {
+        public Criteria andModifyDateIn(List<LocalDateTime> values) {
             addCriterion("modify_date in", values, "modifyDate");
             return (Criteria) this;
         }
 
-        public Criteria andModifyDateNotIn(List<Date> values) {
+        public Criteria andModifyDateNotIn(List<LocalDateTime> values) {
             addCriterion("modify_date not in", values, "modifyDate");
             return (Criteria) this;
         }
 
-        public Criteria andModifyDateBetween(Date value1, Date value2) {
+        public Criteria andModifyDateBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("modify_date between", value1, value2, "modifyDate");
             return (Criteria) this;
         }
 
-        public Criteria andModifyDateNotBetween(Date value1, Date value2) {
+        public Criteria andModifyDateNotBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("modify_date not between", value1, value2, "modifyDate");
             return (Criteria) this;
         }

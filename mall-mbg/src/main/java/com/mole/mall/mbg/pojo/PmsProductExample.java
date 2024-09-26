@@ -1,8 +1,8 @@
 package com.mole.mall.mbg.pojo;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class PmsProductExample {
@@ -2136,52 +2136,52 @@ public class PmsProductExample {
             return (Criteria) this;
         }
 
-        public Criteria andPromotionStartTimeEqualTo(Date value) {
+        public Criteria andPromotionStartTimeEqualTo(LocalDateTime value) {
             addCriterion("promotion_start_time =", value, "promotionStartTime");
             return (Criteria) this;
         }
 
-        public Criteria andPromotionStartTimeNotEqualTo(Date value) {
+        public Criteria andPromotionStartTimeNotEqualTo(LocalDateTime value) {
             addCriterion("promotion_start_time <>", value, "promotionStartTime");
             return (Criteria) this;
         }
 
-        public Criteria andPromotionStartTimeGreaterThan(Date value) {
+        public Criteria andPromotionStartTimeGreaterThan(LocalDateTime value) {
             addCriterion("promotion_start_time >", value, "promotionStartTime");
             return (Criteria) this;
         }
 
-        public Criteria andPromotionStartTimeGreaterThanOrEqualTo(Date value) {
+        public Criteria andPromotionStartTimeGreaterThanOrEqualTo(LocalDateTime value) {
             addCriterion("promotion_start_time >=", value, "promotionStartTime");
             return (Criteria) this;
         }
 
-        public Criteria andPromotionStartTimeLessThan(Date value) {
+        public Criteria andPromotionStartTimeLessThan(LocalDateTime value) {
             addCriterion("promotion_start_time <", value, "promotionStartTime");
             return (Criteria) this;
         }
 
-        public Criteria andPromotionStartTimeLessThanOrEqualTo(Date value) {
+        public Criteria andPromotionStartTimeLessThanOrEqualTo(LocalDateTime value) {
             addCriterion("promotion_start_time <=", value, "promotionStartTime");
             return (Criteria) this;
         }
 
-        public Criteria andPromotionStartTimeIn(List<Date> values) {
+        public Criteria andPromotionStartTimeIn(List<LocalDateTime> values) {
             addCriterion("promotion_start_time in", values, "promotionStartTime");
             return (Criteria) this;
         }
 
-        public Criteria andPromotionStartTimeNotIn(List<Date> values) {
+        public Criteria andPromotionStartTimeNotIn(List<LocalDateTime> values) {
             addCriterion("promotion_start_time not in", values, "promotionStartTime");
             return (Criteria) this;
         }
 
-        public Criteria andPromotionStartTimeBetween(Date value1, Date value2) {
+        public Criteria andPromotionStartTimeBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("promotion_start_time between", value1, value2, "promotionStartTime");
             return (Criteria) this;
         }
 
-        public Criteria andPromotionStartTimeNotBetween(Date value1, Date value2) {
+        public Criteria andPromotionStartTimeNotBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("promotion_start_time not between", value1, value2, "promotionStartTime");
             return (Criteria) this;
         }
@@ -2196,52 +2196,52 @@ public class PmsProductExample {
             return (Criteria) this;
         }
 
-        public Criteria andPromotionEndTimeEqualTo(Date value) {
+        public Criteria andPromotionEndTimeEqualTo(LocalDateTime value) {
             addCriterion("promotion_end_time =", value, "promotionEndTime");
             return (Criteria) this;
         }
 
-        public Criteria andPromotionEndTimeNotEqualTo(Date value) {
+        public Criteria andPromotionEndTimeNotEqualTo(LocalDateTime value) {
             addCriterion("promotion_end_time <>", value, "promotionEndTime");
             return (Criteria) this;
         }
 
-        public Criteria andPromotionEndTimeGreaterThan(Date value) {
+        public Criteria andPromotionEndTimeGreaterThan(LocalDateTime value) {
             addCriterion("promotion_end_time >", value, "promotionEndTime");
             return (Criteria) this;
         }
 
-        public Criteria andPromotionEndTimeGreaterThanOrEqualTo(Date value) {
+        public Criteria andPromotionEndTimeGreaterThanOrEqualTo(LocalDateTime value) {
             addCriterion("promotion_end_time >=", value, "promotionEndTime");
             return (Criteria) this;
         }
 
-        public Criteria andPromotionEndTimeLessThan(Date value) {
+        public Criteria andPromotionEndTimeLessThan(LocalDateTime value) {
             addCriterion("promotion_end_time <", value, "promotionEndTime");
             return (Criteria) this;
         }
 
-        public Criteria andPromotionEndTimeLessThanOrEqualTo(Date value) {
+        public Criteria andPromotionEndTimeLessThanOrEqualTo(LocalDateTime value) {
             addCriterion("promotion_end_time <=", value, "promotionEndTime");
             return (Criteria) this;
         }
 
-        public Criteria andPromotionEndTimeIn(List<Date> values) {
+        public Criteria andPromotionEndTimeIn(List<LocalDateTime> values) {
             addCriterion("promotion_end_time in", values, "promotionEndTime");
             return (Criteria) this;
         }
 
-        public Criteria andPromotionEndTimeNotIn(List<Date> values) {
+        public Criteria andPromotionEndTimeNotIn(List<LocalDateTime> values) {
             addCriterion("promotion_end_time not in", values, "promotionEndTime");
             return (Criteria) this;
         }
 
-        public Criteria andPromotionEndTimeBetween(Date value1, Date value2) {
+        public Criteria andPromotionEndTimeBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("promotion_end_time between", value1, value2, "promotionEndTime");
             return (Criteria) this;
         }
 
-        public Criteria andPromotionEndTimeNotBetween(Date value1, Date value2) {
+        public Criteria andPromotionEndTimeNotBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("promotion_end_time not between", value1, value2, "promotionEndTime");
             return (Criteria) this;
         }

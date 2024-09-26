@@ -4,7 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -28,7 +28,7 @@ public class OmsOrderReturnApply implements Serializable {
     private String orderSn;
 
     @Schema(title = "申请时间")
-    private Date createTime;
+    private LocalDateTime createTime;
 
     @Schema(title = "会员用户名")
     private String memberUsername;
@@ -46,7 +46,7 @@ public class OmsOrderReturnApply implements Serializable {
     private Integer status;
 
     @Schema(title = "处理时间")
-    private Date handleTime;
+    private LocalDateTime handleTime;
 
     @Schema(title = "商品图片")
     private String productPic;
@@ -88,7 +88,7 @@ public class OmsOrderReturnApply implements Serializable {
     private String receiveMan;
 
     @Schema(title = "收货时间")
-    private Date receiveTime;
+    private LocalDateTime receiveTime;
 
     @Schema(title = "收货备注")
     private String receiveNote;

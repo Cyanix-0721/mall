@@ -1,8 +1,8 @@
 package com.mole.mall.mbg.pojo;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class OmsOrderReturnApplyExample {
@@ -426,52 +426,52 @@ public class OmsOrderReturnApplyExample {
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeEqualTo(Date value) {
+        public Criteria andCreateTimeEqualTo(LocalDateTime value) {
             addCriterion("create_time =", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeNotEqualTo(Date value) {
+        public Criteria andCreateTimeNotEqualTo(LocalDateTime value) {
             addCriterion("create_time <>", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeGreaterThan(Date value) {
+        public Criteria andCreateTimeGreaterThan(LocalDateTime value) {
             addCriterion("create_time >", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeGreaterThanOrEqualTo(Date value) {
+        public Criteria andCreateTimeGreaterThanOrEqualTo(LocalDateTime value) {
             addCriterion("create_time >=", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeLessThan(Date value) {
+        public Criteria andCreateTimeLessThan(LocalDateTime value) {
             addCriterion("create_time <", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeLessThanOrEqualTo(Date value) {
+        public Criteria andCreateTimeLessThanOrEqualTo(LocalDateTime value) {
             addCriterion("create_time <=", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeIn(List<Date> values) {
+        public Criteria andCreateTimeIn(List<LocalDateTime> values) {
             addCriterion("create_time in", values, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeNotIn(List<Date> values) {
+        public Criteria andCreateTimeNotIn(List<LocalDateTime> values) {
             addCriterion("create_time not in", values, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeBetween(Date value1, Date value2) {
+        public Criteria andCreateTimeBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("create_time between", value1, value2, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeNotBetween(Date value1, Date value2) {
+        public Criteria andCreateTimeNotBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("create_time not between", value1, value2, "createTime");
             return (Criteria) this;
         }
@@ -816,52 +816,52 @@ public class OmsOrderReturnApplyExample {
             return (Criteria) this;
         }
 
-        public Criteria andHandleTimeEqualTo(Date value) {
+        public Criteria andHandleTimeEqualTo(LocalDateTime value) {
             addCriterion("handle_time =", value, "handleTime");
             return (Criteria) this;
         }
 
-        public Criteria andHandleTimeNotEqualTo(Date value) {
+        public Criteria andHandleTimeNotEqualTo(LocalDateTime value) {
             addCriterion("handle_time <>", value, "handleTime");
             return (Criteria) this;
         }
 
-        public Criteria andHandleTimeGreaterThan(Date value) {
+        public Criteria andHandleTimeGreaterThan(LocalDateTime value) {
             addCriterion("handle_time >", value, "handleTime");
             return (Criteria) this;
         }
 
-        public Criteria andHandleTimeGreaterThanOrEqualTo(Date value) {
+        public Criteria andHandleTimeGreaterThanOrEqualTo(LocalDateTime value) {
             addCriterion("handle_time >=", value, "handleTime");
             return (Criteria) this;
         }
 
-        public Criteria andHandleTimeLessThan(Date value) {
+        public Criteria andHandleTimeLessThan(LocalDateTime value) {
             addCriterion("handle_time <", value, "handleTime");
             return (Criteria) this;
         }
 
-        public Criteria andHandleTimeLessThanOrEqualTo(Date value) {
+        public Criteria andHandleTimeLessThanOrEqualTo(LocalDateTime value) {
             addCriterion("handle_time <=", value, "handleTime");
             return (Criteria) this;
         }
 
-        public Criteria andHandleTimeIn(List<Date> values) {
+        public Criteria andHandleTimeIn(List<LocalDateTime> values) {
             addCriterion("handle_time in", values, "handleTime");
             return (Criteria) this;
         }
 
-        public Criteria andHandleTimeNotIn(List<Date> values) {
+        public Criteria andHandleTimeNotIn(List<LocalDateTime> values) {
             addCriterion("handle_time not in", values, "handleTime");
             return (Criteria) this;
         }
 
-        public Criteria andHandleTimeBetween(Date value1, Date value2) {
+        public Criteria andHandleTimeBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("handle_time between", value1, value2, "handleTime");
             return (Criteria) this;
         }
 
-        public Criteria andHandleTimeNotBetween(Date value1, Date value2) {
+        public Criteria andHandleTimeNotBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("handle_time not between", value1, value2, "handleTime");
             return (Criteria) this;
         }
@@ -1756,52 +1756,52 @@ public class OmsOrderReturnApplyExample {
             return (Criteria) this;
         }
 
-        public Criteria andReceiveTimeEqualTo(Date value) {
+        public Criteria andReceiveTimeEqualTo(LocalDateTime value) {
             addCriterion("receive_time =", value, "receiveTime");
             return (Criteria) this;
         }
 
-        public Criteria andReceiveTimeNotEqualTo(Date value) {
+        public Criteria andReceiveTimeNotEqualTo(LocalDateTime value) {
             addCriterion("receive_time <>", value, "receiveTime");
             return (Criteria) this;
         }
 
-        public Criteria andReceiveTimeGreaterThan(Date value) {
+        public Criteria andReceiveTimeGreaterThan(LocalDateTime value) {
             addCriterion("receive_time >", value, "receiveTime");
             return (Criteria) this;
         }
 
-        public Criteria andReceiveTimeGreaterThanOrEqualTo(Date value) {
+        public Criteria andReceiveTimeGreaterThanOrEqualTo(LocalDateTime value) {
             addCriterion("receive_time >=", value, "receiveTime");
             return (Criteria) this;
         }
 
-        public Criteria andReceiveTimeLessThan(Date value) {
+        public Criteria andReceiveTimeLessThan(LocalDateTime value) {
             addCriterion("receive_time <", value, "receiveTime");
             return (Criteria) this;
         }
 
-        public Criteria andReceiveTimeLessThanOrEqualTo(Date value) {
+        public Criteria andReceiveTimeLessThanOrEqualTo(LocalDateTime value) {
             addCriterion("receive_time <=", value, "receiveTime");
             return (Criteria) this;
         }
 
-        public Criteria andReceiveTimeIn(List<Date> values) {
+        public Criteria andReceiveTimeIn(List<LocalDateTime> values) {
             addCriterion("receive_time in", values, "receiveTime");
             return (Criteria) this;
         }
 
-        public Criteria andReceiveTimeNotIn(List<Date> values) {
+        public Criteria andReceiveTimeNotIn(List<LocalDateTime> values) {
             addCriterion("receive_time not in", values, "receiveTime");
             return (Criteria) this;
         }
 
-        public Criteria andReceiveTimeBetween(Date value1, Date value2) {
+        public Criteria andReceiveTimeBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("receive_time between", value1, value2, "receiveTime");
             return (Criteria) this;
         }
 
-        public Criteria andReceiveTimeNotBetween(Date value1, Date value2) {
+        public Criteria andReceiveTimeNotBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("receive_time not between", value1, value2, "receiveTime");
             return (Criteria) this;
         }

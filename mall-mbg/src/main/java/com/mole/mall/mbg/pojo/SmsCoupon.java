@@ -4,7 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -35,9 +35,9 @@ public class SmsCoupon implements Serializable {
     @Schema(title = "使用门槛；0表示无门槛")
     private BigDecimal minPoint;
 
-    private Date startTime;
+    private LocalDateTime startTime;
 
-    private Date endTime;
+    private LocalDateTime endTime;
 
     @Schema(title = "使用类型：0->全场通用；1->指定分类；2->指定商品")
     private Integer useType;
@@ -55,7 +55,7 @@ public class SmsCoupon implements Serializable {
     private Integer receiveCount;
 
     @Schema(title = "可以领取的日期")
-    private Date enableTime;
+    private LocalDateTime enableTime;
 
     @Schema(title = "优惠码")
     private String code;

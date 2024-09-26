@@ -3,7 +3,7 @@ package com.mole.mall.mbg.pojo;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.Serial;
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,7 +16,7 @@ public class PmsProductVertifyRecord implements Serializable {
 
     private Long productId;
 
-    private Date createTime;
+    private LocalDateTime createTime;
 
     @Schema(title = "审核人")
     private String vertifyMan;

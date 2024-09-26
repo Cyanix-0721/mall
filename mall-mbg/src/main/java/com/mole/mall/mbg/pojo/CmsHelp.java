@@ -1,33 +1,33 @@
 package com.mole.mall.mbg.pojo;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serial;
+import java.io.Serializable;
+import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.io.Serial;
-import java.io.Serializable;
-import java.util.Date;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class CmsHelp implements Serializable {
-	private Long id;
+    private Long id;
 
-	private Long categoryId;
+    private Long categoryId;
 
-	private String icon;
+    private String icon;
 
-	private String title;
+    private String title;
 
-	private Integer showStatus;
+    private Integer showStatus;
 
-	private Date createTime;
+    private LocalDateTime createTime;
 
-	private Integer readCount;
+    private Integer readCount;
 
-	private String content;
+    private String content;
 
-	@Serial
-	private static final long serialVersionUID = 1L;
+    @Serial
+    private static final long serialVersionUID = 1L;
 }

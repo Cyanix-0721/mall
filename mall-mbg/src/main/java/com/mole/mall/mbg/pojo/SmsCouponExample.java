@@ -1,8 +1,8 @@
 package com.mole.mall.mbg.pojo;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class SmsCouponExample {
@@ -606,52 +606,52 @@ public class SmsCouponExample {
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeEqualTo(Date value) {
+        public Criteria andStartTimeEqualTo(LocalDateTime value) {
             addCriterion("start_time =", value, "startTime");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeNotEqualTo(Date value) {
+        public Criteria andStartTimeNotEqualTo(LocalDateTime value) {
             addCriterion("start_time <>", value, "startTime");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeGreaterThan(Date value) {
+        public Criteria andStartTimeGreaterThan(LocalDateTime value) {
             addCriterion("start_time >", value, "startTime");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeGreaterThanOrEqualTo(Date value) {
+        public Criteria andStartTimeGreaterThanOrEqualTo(LocalDateTime value) {
             addCriterion("start_time >=", value, "startTime");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeLessThan(Date value) {
+        public Criteria andStartTimeLessThan(LocalDateTime value) {
             addCriterion("start_time <", value, "startTime");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeLessThanOrEqualTo(Date value) {
+        public Criteria andStartTimeLessThanOrEqualTo(LocalDateTime value) {
             addCriterion("start_time <=", value, "startTime");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeIn(List<Date> values) {
+        public Criteria andStartTimeIn(List<LocalDateTime> values) {
             addCriterion("start_time in", values, "startTime");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeNotIn(List<Date> values) {
+        public Criteria andStartTimeNotIn(List<LocalDateTime> values) {
             addCriterion("start_time not in", values, "startTime");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeBetween(Date value1, Date value2) {
+        public Criteria andStartTimeBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("start_time between", value1, value2, "startTime");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeNotBetween(Date value1, Date value2) {
+        public Criteria andStartTimeNotBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("start_time not between", value1, value2, "startTime");
             return (Criteria) this;
         }
@@ -666,52 +666,52 @@ public class SmsCouponExample {
             return (Criteria) this;
         }
 
-        public Criteria andEndTimeEqualTo(Date value) {
+        public Criteria andEndTimeEqualTo(LocalDateTime value) {
             addCriterion("end_time =", value, "endTime");
             return (Criteria) this;
         }
 
-        public Criteria andEndTimeNotEqualTo(Date value) {
+        public Criteria andEndTimeNotEqualTo(LocalDateTime value) {
             addCriterion("end_time <>", value, "endTime");
             return (Criteria) this;
         }
 
-        public Criteria andEndTimeGreaterThan(Date value) {
+        public Criteria andEndTimeGreaterThan(LocalDateTime value) {
             addCriterion("end_time >", value, "endTime");
             return (Criteria) this;
         }
 
-        public Criteria andEndTimeGreaterThanOrEqualTo(Date value) {
+        public Criteria andEndTimeGreaterThanOrEqualTo(LocalDateTime value) {
             addCriterion("end_time >=", value, "endTime");
             return (Criteria) this;
         }
 
-        public Criteria andEndTimeLessThan(Date value) {
+        public Criteria andEndTimeLessThan(LocalDateTime value) {
             addCriterion("end_time <", value, "endTime");
             return (Criteria) this;
         }
 
-        public Criteria andEndTimeLessThanOrEqualTo(Date value) {
+        public Criteria andEndTimeLessThanOrEqualTo(LocalDateTime value) {
             addCriterion("end_time <=", value, "endTime");
             return (Criteria) this;
         }
 
-        public Criteria andEndTimeIn(List<Date> values) {
+        public Criteria andEndTimeIn(List<LocalDateTime> values) {
             addCriterion("end_time in", values, "endTime");
             return (Criteria) this;
         }
 
-        public Criteria andEndTimeNotIn(List<Date> values) {
+        public Criteria andEndTimeNotIn(List<LocalDateTime> values) {
             addCriterion("end_time not in", values, "endTime");
             return (Criteria) this;
         }
 
-        public Criteria andEndTimeBetween(Date value1, Date value2) {
+        public Criteria andEndTimeBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("end_time between", value1, value2, "endTime");
             return (Criteria) this;
         }
 
-        public Criteria andEndTimeNotBetween(Date value1, Date value2) {
+        public Criteria andEndTimeNotBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("end_time not between", value1, value2, "endTime");
             return (Criteria) this;
         }
@@ -1036,52 +1036,52 @@ public class SmsCouponExample {
             return (Criteria) this;
         }
 
-        public Criteria andEnableTimeEqualTo(Date value) {
+        public Criteria andEnableTimeEqualTo(LocalDateTime value) {
             addCriterion("enable_time =", value, "enableTime");
             return (Criteria) this;
         }
 
-        public Criteria andEnableTimeNotEqualTo(Date value) {
+        public Criteria andEnableTimeNotEqualTo(LocalDateTime value) {
             addCriterion("enable_time <>", value, "enableTime");
             return (Criteria) this;
         }
 
-        public Criteria andEnableTimeGreaterThan(Date value) {
+        public Criteria andEnableTimeGreaterThan(LocalDateTime value) {
             addCriterion("enable_time >", value, "enableTime");
             return (Criteria) this;
         }
 
-        public Criteria andEnableTimeGreaterThanOrEqualTo(Date value) {
+        public Criteria andEnableTimeGreaterThanOrEqualTo(LocalDateTime value) {
             addCriterion("enable_time >=", value, "enableTime");
             return (Criteria) this;
         }
 
-        public Criteria andEnableTimeLessThan(Date value) {
+        public Criteria andEnableTimeLessThan(LocalDateTime value) {
             addCriterion("enable_time <", value, "enableTime");
             return (Criteria) this;
         }
 
-        public Criteria andEnableTimeLessThanOrEqualTo(Date value) {
+        public Criteria andEnableTimeLessThanOrEqualTo(LocalDateTime value) {
             addCriterion("enable_time <=", value, "enableTime");
             return (Criteria) this;
         }
 
-        public Criteria andEnableTimeIn(List<Date> values) {
+        public Criteria andEnableTimeIn(List<LocalDateTime> values) {
             addCriterion("enable_time in", values, "enableTime");
             return (Criteria) this;
         }
 
-        public Criteria andEnableTimeNotIn(List<Date> values) {
+        public Criteria andEnableTimeNotIn(List<LocalDateTime> values) {
             addCriterion("enable_time not in", values, "enableTime");
             return (Criteria) this;
         }
 
-        public Criteria andEnableTimeBetween(Date value1, Date value2) {
+        public Criteria andEnableTimeBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("enable_time between", value1, value2, "enableTime");
             return (Criteria) this;
         }
 
-        public Criteria andEnableTimeNotBetween(Date value1, Date value2) {
+        public Criteria andEnableTimeNotBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("enable_time not between", value1, value2, "enableTime");
             return (Criteria) this;
         }

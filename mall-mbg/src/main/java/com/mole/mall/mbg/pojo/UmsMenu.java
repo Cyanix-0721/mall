@@ -3,7 +3,7 @@ package com.mole.mall.mbg.pojo;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.Serial;
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,7 +18,7 @@ public class UmsMenu implements Serializable {
     private Long parentId;
 
     @Schema(title = "创建时间")
-    private Date createTime;
+    private LocalDateTime createTime;
 
     @Schema(title = "菜单名称")
     private String title;

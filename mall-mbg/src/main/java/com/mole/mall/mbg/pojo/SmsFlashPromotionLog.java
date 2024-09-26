@@ -3,7 +3,7 @@ package com.mole.mall.mbg.pojo;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.Serial;
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,9 +23,9 @@ public class SmsFlashPromotionLog implements Serializable {
     private String productName;
 
     @Schema(title = "会员订阅时间")
-    private Date subscribeTime;
+    private LocalDateTime subscribeTime;
 
-    private Date sendTime;
+    private LocalDateTime sendTime;
 
     @Serial
     private static final long serialVersionUID = 1L;

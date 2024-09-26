@@ -3,7 +3,8 @@ package com.mole.mall.mbg.pojo;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.Serial;
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -32,7 +33,7 @@ public class UmsMember implements Serializable {
     private Integer status;
 
     @Schema(title = "注册时间")
-    private Date createTime;
+    private LocalDateTime createTime;
 
     @Schema(title = "头像")
     private String icon;
@@ -41,7 +42,7 @@ public class UmsMember implements Serializable {
     private Integer gender;
 
     @Schema(title = "生日")
-    private Date birthday;
+    private LocalDate birthday;
 
     @Schema(title = "所做城市")
     private String city;
