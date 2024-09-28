@@ -11,13 +11,12 @@ import java.util.List;
  * @github https://github.com/macrozheng
  */
 @Data
-@EqualsAndHashCode(callSuper = false)
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class UserDto {
-    private Long id;
-    private String username;
-    private String clientId;
-    private List<String> permissionList;
+	private Long id;
+	private String username;
+	private String clientId;
+	private List<String> permissionList;
 }
