@@ -24,7 +24,8 @@ public class CommentGenerator extends DefaultCommentGenerator {
 	/**
 	 * 设置用户配置的参数
 	 *
-	 * @param properties 用户配置的属性
+	 * @param properties
+	 * 		用户配置的属性
 	 */
 	@Override
 	public void addConfigurationProperties(Properties properties) {
@@ -35,9 +36,12 @@ public class CommentGenerator extends DefaultCommentGenerator {
 	/**
 	 * 给字段添加注释
 	 *
-	 * @param field              字段
-	 * @param introspectedTable  内省表
-	 * @param introspectedColumn 内省列
+	 * @param field
+	 * 		字段
+	 * @param introspectedTable
+	 * 		内省表
+	 * @param introspectedColumn
+	 * 		内省列
 	 */
 	@Override
 	public void addFieldComment(Field field, IntrospectedTable introspectedTable,
@@ -57,8 +61,10 @@ public class CommentGenerator extends DefaultCommentGenerator {
 	/**
 	 * 给模型的字段添加注释
 	 *
-	 * @param field   字段
-	 * @param remarks 备注信息
+	 * @param field
+	 * 		字段
+	 * @param remarks
+	 * 		备注信息
 	 */
 	private void addFieldJavaDoc(Field field, String remarks) {
 		// 文档注释开始
@@ -75,7 +81,8 @@ public class CommentGenerator extends DefaultCommentGenerator {
 	/**
 	 * 给 Java 文件添加注释
 	 *
-	 * @param compilationUnit 编译单元
+	 * @param compilationUnit
+	 * 		编译单元
 	 */
 	@Override
 	public void addJavaFileComment(CompilationUnit compilationUnit) {
