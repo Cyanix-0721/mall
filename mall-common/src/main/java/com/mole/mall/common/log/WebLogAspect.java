@@ -6,14 +6,13 @@ import cn.hutool.json.JSONUtil;
 import com.mole.mall.common.domain.WebLog;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.servlet.http.HttpServletRequest;
+import lombok.extern.slf4j.Slf4j;
 import net.logstash.logback.marker.Markers;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.*;
 import org.aspectj.lang.reflect.MethodSignature;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
@@ -37,9 +36,8 @@ import java.util.Map;
 @Aspect
 @Component
 @Order(1)
+@Slf4j
 public class WebLogAspect {
-	private static final Logger LOGGER = LoggerFactory.getLogger(WebLogAspect.class);
-
 	/**
 	 * 定义切点，匹配所有控制器中的公共方法
 	 */
@@ -115,7 +113,7 @@ public class WebLogAspect {
 		logMap.put("description", webLog.getDescription());
 
 		// 记录日志信息
-		LOGGER.info(Markers.appendEntries(logMap), JSONUtil.parse(webLog).toString());
+		log.info(Markers.appendEntries(logMap), JSONUtil.parse(webLog).toString());
 
 		return result;
 	}
