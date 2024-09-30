@@ -48,8 +48,7 @@ public class SpringDocConfig implements WebMvcConfigurer {
 	/**
 	 * 配置视图控制器，用于将`/swagger-ui/`路径重定向到`/swagger-ui/index.html`
 	 *
-	 * @param registry
-	 * 		视图控制器注册表
+	 * @param registry 视图控制器注册表
 	 */
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
